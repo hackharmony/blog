@@ -1,0 +1,45 @@
+---
+layout: default
+title: Resources & Training Material
+---
+
+* What’s this?
+A curated collection of documents that I found useful over time for studying programming.
+* General approaches to finding resources
+** Don’t ever buy physical books.
+Especially for programming material, everything is on the internet. Even [[https://libgen.io][books]]. Even [[https://sci-hub.tw][paywalled research papers]]. For software, focus on using the authors’ documentation as your first resource.
+** Stack Overflow Driven Development
+There is no shame in Stack Overflowing all the time. The shame is in searching twice on Stack Overflow for the same problem. You need to remember the solution to the problem. Pay attention.
+** Use manpages.
+* Programming Languages
+** Ruby
+[[https://ruby-doc.org][official Ruby docs]]
+** Common Lisp
+*** books
+- Peter Siebel - [[http://www.gigamonkeys.com/book/][/Practical Common Lisp/]] (fulltext) (2005)
+- Paul Graham - [[http://www.paulgraham.com/onlisptext.html][/On Lisp/]] (fulltext) (1993)
+- Doug Hoyte - [[https://letoverlambda.com/][/Let Over Lambda/]] (2008)
+- Paul Graham - [[http://www.paulgraham.com/acl.html][/ANSI Common Lisp/]] (1995)
+*** standard
+[[http://www.lispworks.com/documentation/HyperSpec/Front/][Common Lisp Hyperspec]]
+** Python
+[[https://docs.python.org/3/][official Python docs]]
+** C++
+*** books
+- Bjarne Stroustrup - [[https://isocpp.org/tour][/A Tour of C++/]] (2017)
+- Scott Myers - /Effective Modern C++/
+*** documentation
+[[https://en.cppreference.com/w/][cppreference.com]]
+*** standard
+The C++ standard is the most authoritative reference for C++. It is very difficult to read; you are probably better off relying on [[https://en.cppreference.com/w/][cppreference.com]] unless you want to be a C++ expert or contribute to compilers. It is good to keep on your hard drive as a reference, though, like a lawyer keeps bookshelves of legal cases that he or she may not necessarily ever read.
+
+The ISO C++ Committee charges you hundreds of dollars for official releases of the standard. The [[https://wg21.link/std][current working draft of the standard]] is available for free though.
+** Golang
+*** standard
+[[https://golang.org/ref/spec][Go language specification]]
+*** best practices
+[[https://golang.org/doc/effective_go.html][Effective Go]]
+* Tools
+** git
+The [[https://git-scm.com/book/][/Pro Git/]] book is the standard resource. It was very helpful, but there is so much to git that you really have to learn by doing and diving into the man pages as your issues arise.
+** TODO Docker
