@@ -20,6 +20,10 @@ paginate:         10
 
 plugins:
   - jekyll-paginate
-  - jekyll_org_to_html
+  - jekyll-org-to-html
 
 version: 0.0.1
+
+collections:
+  software:
+    output: true

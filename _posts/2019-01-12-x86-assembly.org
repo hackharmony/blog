@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [tutorials]
 ---
 
 * Why learn Assembly (ASM)?
@@ -7,6 +8,3 @@ You will always be a pretend-programmer unless you understand how the machine ac
 ** Reverse engineering
 ** Debugging your own programs
 ** Embedded systems
-\begin{equation}
-4+4 = 20
-\end{equation}

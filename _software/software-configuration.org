@@ -1,13 +1,21 @@
 ---
-layout: post
+layout: page
+title: Software Configuration
+subtitle: How I configure various software I run; all the useful settings I use; good reference for starting over with a new machine
 ---
 
+#+OPTIONS: toc:t
 * GNU/Linux
 ** Emacs keybindings everywhere
 *** GTK
 https://wiki.archlinux.org/index.php/GTK+#Emacs_key_bindings
 **** Gtk3
+How to set Emacs-like keybindings in GTK v3:
+
+#+NAME: GTK v3 command to enable Emacs-like keybindings across the desktop environment
+#+BEGIN_SRC bash
 $ gsettings set org.gnome.desktop.interface gtk-key-theme "Emacs"
+#+END_SRC
 
 If you have Anaconda installed, make sure your path points to your system gsettings not Anaconda’s gsettings.
 **** Gtk2
@@ -15,25 +23,40 @@ If you have Anaconda installed, make sure your path points to your system gsetti
 gconftool-2 --type=string --set /desktop/gnome/interface/gtk_key_theme Emacs
 #+END_SRC
 
-~/.gtkrc-2.0
+In ~~/.gtkrc-2.0~, add this line:
+#+BEGIN_EXAMPLE
 gtk-key-theme-name = "Emacs"
+#+END_EXAMPLE
 **** XFCE
+#+BEGIN_SRC bash
 $ xfconf-query -c xsettings -p /Gtk/KeyThemeName -s Emacs
+#+END_SRC
 *** Chromium/Google Chrome
-in “/home/zds/.config/gtk-3.0/settings.ini/” add this line:
+in ~$HOME/.config/gtk-3.0/settings.ini~ add this line:
+#+BEGIN_EXAMPLE
 gtk-key-theme-name=Emacs
+#+END_EXAMPLE
 ** Desktop environment
+*** KDE
 *** Xfce
 ** Emacs
-*** recommended compilation flags
+*** Compile it yourself
+**** Why?
+- Optimize to your hardware
+- Use the ~lucid~ GUI toolkit for better looking text
+**** recommended compilation flags
+--with-imagemagick --with-x-toolkit=lucid 'CFLAGS=-O3 -march=native'
+*** daemon and client
 ** Terminal emulator
 ** Shell
 *** bash
 *** zsh
-** input devicess
+** input devices
 *** keyboard
 **** fast repeat, low repeat delay
+#+BEGIN_SRC bash
 $ xset r rate [delay ms] [rate]
+#+END_SRC
 Recommended: xset r rate 160 180
 *** mouse
 **** high acceleration 
@@ -41,19 +64,25 @@ Recommended: xset r rate 160 180
 ** input devices
 *** keyboard
 **** fast repeat, low repeat delay
+#+BEGIN_SRC bash
 $ defaults write -g KeyRepeat -int 1
 $ defaults write -g InitialKeyRepeat -int 10
+#+END_SRC
 ** Emacs
 *** Emacs Daemon
 These instructions work as of macOS High Sierra (version 10.14) to run Emacs as a daemon on login. You can quickly run emacsclient instances without waiting for Emacs to start up.
 **** Create an Apple Script with “Script Editor.app”
-~/Applications/Emacs Daemon.app:
+~~/Applications/Emacs Daemon.app~:
+#+BEGIN_SRC applescript
 do shell script "/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
-**** Add “Emacs Daemon.app" to autostart.
+#+END_SRC
+**** Add “Emacs Daemon.app” to autostart.
 System Preferences → Users & Groups → choose your user → Login Items
 **** Create an Apple Script for the client.
-“~/Applications/Emacs Client.app”:
+~~/Applications/Emacs Client.app~:
+#+BEGIN_SRC applescript
 do shell script "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nc"
+#+END_SRC
 * Windows
 ** keyboard repeat speed
 *** TODO find and publish the source of that Windows.h-calling code that changes keyboard repeat speed on Windows
@@ -70,14 +99,13 @@ You can either modify Chromium’s .desktop entry to run this command or make th
 
 #+BEGIN_SRC bash
 #!/bin/sh
-
 export XDG_CURRENT_DESKTOP=KDE
 exec chromium-browser "$@"
 #+END_SRC
 * Emacs
 - See my dotfiles/emacs.d repo
 - Take advantage of Language Server Protocol.
-* Hardware
+* Hardware/Firmware
 ** Reduce blue light from monitors
 Blue light is [[https://phys.org/news/2018-08-chemists-blue.html][harmful and permanently damaging to your retinas]].
 1. Toggle the on-screen menu.
@@ -86,3 +114,8 @@ Blue light is [[https://phys.org/news/2018-08-chemists-blue.html][harmful and pe
    1. blue
    2. cyan
    3. magenta
+* Jekyll
+** Use org-mode without any fuss
+Install [[https://github.com/hackharmony/jekyll-org-to-html][my Jekyll converter plugin for using org-mode markup in a Jekyll site]]. It uses Emacs directly—using Emacs’s mature, native org-mode HTML export command rather than reinventing a separate org-mode exporter. There are no surprises to deal with if you are a regular org-mode user.
+** Theme
+This site uses the [[https://github.com/poole/hyde][Hyde theme]].
