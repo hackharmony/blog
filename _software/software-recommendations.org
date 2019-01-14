@@ -1,0 +1,244 @@
+---
+layout: page
+title: Software Recommendations
+subtitle: A curated list of the best software, programming languages, or development tools you should choose depending on your use case
+---
+
+#+OPTIONS: toc:t
+* Abstract
+This is a curated collection of software that I recommend and brief reviews. It’s basically your ultimate guide to computing effectively. I have a bias toward software with free and open source licenses. Where I choose proprietary alternatives otherwise is always for very good reason.
+* Operating system
+Use the right tool for the job. It all really depends on what you are doing, so instead of recommending one OS over all others, I will review each of them based on my experience with them. I have used all major operating systems. The top 3 OSes (macOS, GNU/Linux, and Windows) are all part of my regular usage, and all have their uses.
+
+1. macOS
+2. GNU/Linux
+3. Windows 10
+4. *BSD
+* Web browser
+** Chromium (or Google Chrome)
+As much as I wanted to like Mozilla Firefox, I have stopped fighting the trend. Every website out there is developed to target WebKit browsers first. There is no competing with the massive resources and mindshare directed at Chromium development. This means more than just better superficial features—it means better security updates. Chrom{e, ium} has the best dev tools for web development.
+
+Prefer Chromium over Google Chrome. Why? It has slightly less spyware built in, and you are free to compile it yourself in the spirit of free software.
+* Text editor / IDE
+** editor
+*** GNU Emacs
+** IDE
+*** Visual Studio
+If you are doing any kind of development for Windows systems, you would be a fool to use anything but Visual Studio. (N.B., I’m not talking about /Visual Studio Code/. I’m not a fan of VS Code.)
+
+Visual Studio is hands down the best C++ IDE ever.
+*** XCode
+*** Eclipse?
+* Shell
+** bash
+** zsh
+** Python or Ruby
+If you have to write a script that will ever be used again in the future by you or someone else, then don’t write it in shell script. Please use Python or Ruby (not Perl—that’s as unreadable as shell). Shell script is for one-off actions.
+
+Shell scripts aren’t “real” languages. They don’t have utilites for abstraction beyond just subroutines. Shell scripts aren’t maintainable. It’s a lot harder to read shell script. Everyone knows Python and Ruby. Use one of those.
+
+- Everyone knows Python and Ruby
+- Python and Ruby are readable
+- Python and Ruby are maintainable
+- Python and Ruby can make system calls directly instead of forking processes for every line of code; much better performance
+
+There are some people who use IPython as their system shell and never touch bash. I think that’s a little extreme, but it’s certainly possible.
+* Programming languages
+As always, my mantra is: /Use the right tool for the job!/ Nevertheless, I will review my favorite languages here.
+** For the pedantic: Languages vs. Runtimes
+** Languages
+*** by use case
+**** general purpose
+1. C++
+2. Java
+3. Common Lisp
+4. Rust
+**** scripting
+1. Ruby
+2. Python
+3. Lua
+**** science/stats/machine learning
+1. Python
+2. C++
+3. Mathematica
+4. R
+**** web services
+1. Golang
+2. Java
+3. Ruby
+**** web frontend
+1. TypeScript
+2. JavaScript (latest ECMAScript standard)
+3. ClojureScript
+**** mobile apps
+1. Swift
+2. Kotlin
+**** Windows
+1. C#
+2. C++
+*** Reviews
+**** C++
+**** Common Lisp
+***** recommended implementation
+SBCL
+***** If LISP is so good, why did it fail?
+- [[https://groups.google.com/forum/#!topic/comp.lang.lisp/eicqvm3GXiE][The Bipolar Lisp Programmer]]
+- [[http://winestockwebdesign.com/Essays/Lisp_Curse.html][The Lisp Curse]]
+- [[https://www.jwz.org/doc/worse-is-better.html][Worse Is Better]]
+**** Scheme
+***** best implementations
+****** GNU Kawa
+- Compiles to portable JVM bytecode
+- Entire JVM ecosystem available with convenient interop syntax
+****** Chez Scheme
+- Compiles to very efficient machine code; ideal for deployment
+- Unfortunately, no libraries
+****** Racket
+- Easiest to get started with
+- Con: Not really Scheme
+**** Golang
+Golang is basically a DSL for writing web servers and web services. It is /phenomenal/ at this. Golang gives you all the batteries you need to write very good web and networking software and the battle-testedness that comes with it being used by big corporations for this purpose.
+
+You shouldn’t use it for much else though. Well, it’s good as an alternative to Python for when you need a binary and non-molasses performance.
+**** JavaScript
+**** Java
+Java gets far too much hate. It’s the best language and ecosystem for almost 99% of applications.
+**** Clojure
+**** Ruby
+**** Python
+**** Mathematica
+**** Rust
+**** Haskell
+*** Trash Languages
+**** C
+The triumph of C was one of the greater tragedies in the history of computing (and perhaps the history of humanity). The entire computer security industry would not exist without C. It is broken by design. Programmers having access to pointers to raw memory was a mistake. C is behind every security vulnerability or software crash that cost society trillions of dollars or countless human lives whenever critical systems have crash for “unknown” reasons. Every C programmer thinks he or she is going to be the one who is smart enough to never make these serious mistakes; they laugh when you tell them to sacrifice a tiny bit of performance for a memory/type safe language instead. Nah, Python and Java are for wimps.
+
+The worst part is that the C mental model isn’t even how CPUs work anymore. Where’s the C semantics for CPU caches? Or SIMD vectorization? Compiler authors have worked very hard to infer educated guesses about the correct instructions from C code, because C code is unable to express these intents. C is hardly “close to the metal”—it’s only by accident because the compilers are so advanced.
+
+Don’t use C. Ever. Use modern C++20 and get literally the exact same performance at significantly less risk for catastrophic failure. If you are willing to experiment, and sacrifice only a small amount of performance, opt for Rust instead.
+**** Perl
+Spaghetti code.
+**** Visual Basic
+**** PHP
+Spaghetti code.
+**** Clojure
+It’s not a LISP. It sacrifices a lot to be compatible with Java. Many of the best features of Common Lisp are missing in Clojure. Clojure is also basically unmaintained, being an in-house tool for Rich Hickey’s company first and a community open source language second. Just use Common Lisp.
+*** Useless But Fun Hobby Languages
+Only devote time to these if you literally have nothing better to do, or are doing a Ph.D. on programming language theory. They explore very interesting ideas, but rest assured, these ideas will be incorporated in mainstream languages if they are proven good enough.
+**** Idris
+Dependent types are potentially a game changer. Problem is, I can’t think of many practical uses for them aside from the canonical example of vector bounds checking.
+**** Scheme
+**** Haskell
+The most important thing you can learn from Haskell is when to give up learning something.
+
+It’s a very beautiful language, but with the mental energy required to get good at it, you could have done so many other things. Personally, I learned the basics of the language up until I got to lenses and monad transformers; then I gave up, putting it on hold until some future time.
+
+Even if you are a wizard at Haskell, you won’t be able to write many useful programs with it—comfortably—because of how awkward it is at handling side effects. Network connections, IO on databases, drawing graphics, interacting with hardware—this is the bread and butter of real world programming. Have fun doing that in Haskell all day.
+
+Since everyone touts Haskell “because it makes you a better programmer,” why not get that benefit without wasting time trying to write programs in Haskell? Just learn these memes:
+
+- currying
+- functors
+- applicative functors
+- fmap, join, bind; [[https://en.wikibooks.org/wiki/Haskell/Category_theory][elementary category theory]]
+- [[https://wiki.haskell.org/Typeclassopedia][monads]]
+**** CoQ
+* Databases
+** RDBMS
+*** PostgreSQL
+** In-Memory Cache
+*** Redis
+** Embedded
+*** SQLite3
+*** LMDB
+* Fonts
+** serif
+*** Charter
+Ideal for body text.
+*** Publico Text
+*** Leitura News
+** monospace (for code)
+*** Go Mono
+*** Operator Mono
+The Lamborghini of programming fonts.
+*** IBM Plex
+*** Fira Code?
+** sans serif
+*** Adelle Sans
+*** San Francisco
+* Multimedia
+** editors
+*** audio
+*** video
+Adobe Premiere Pro
+*** photos
+Adobe Photoshop
+** players
+*** video
+mpv
+*** audio
+**** Windows
+foobar2000
+**** GNU/Linux
+Clementine (?)
+* Office
+** Word processor
+*** academic
+LaTeX
+*** lightweight markup
+1. org-mode
+2. markdown
+3. s-exp code (?)
+*** everything else
+Microsoft Word
+** Presentation
+Apple Keynote
+** Spreadsheet
+Microsoft Excel
+** Email client
+Mozilla Thunderbird
+** On LibreOffice
+LibreOffice is horribly bad. I guess it’s good that Linux users have /some/ native office clients. It gets the job done—barely. But unless you’re Richard Stallman, just boot into Windows and use Microsoft Office and save your time.
+* Cryptocurrency
+** Bitcoin ($XBT)
+- First mover advantage
+- Historical value
+- Digital gold; store of value
+- Capped supply motivates a game theoretic boost in its market value
+** Monero ($XMR)
+This is one of the best cryptocurrencies and probably the only one besides Bitcoin that will still be used in 20 years. Monero implements the ideal of cryptocurrency as an anonymous, fungible, censorship-resistant electronic cash.
+** Ethereum ($ETH)
+Scam destined for failure. It’s based on this idealistic “world computer” meme that while interesting has no reason to involve currency at all except to be a cash grab. Smart contracts are a joke—I can much more easily implement “smart contracts” using fiat and traditional payment gateways than by using some decentralized mess.
+*** the JavaScript problem
+The idea of smart contracts is to have programs running on a P2P network that decide to spend a certain amount of Ethereum tokens. Problems:
+
+- Ethereum uses a JavaScript VM.
+- An anonymous person’s Turing complete code runs on anonymous people’s computers.
+- You can’t fix bugs in a smart contract once it’s deployed because it’s immutable in the blockchain.
+
+When someone tells you they want to manage everyone’s /money/ using /JavaScript/, you turn the other way and get out of there as fast as possible. Millions of dollars (of real money—USD) have been lost already to Ethereum bugs, and there will always be more in the future. All programs have bugs. I would have had more confidence in smart contracts had Ethereum used something like CoQ or Agda—formal proof verifying languages (don’t compile if the proof is wrong)—rather than their DSL sitting on top of JavaScript, an extremely fragile and type unsafe interpreter that probably is more likely to result in bugs than any other contemporary language runtime.
+*** the “smart contracts” problem
+We don’t /need/ Ethereum to create the utility of a smart contract. Ethereum advocates argue that it would be used to validate transactions in exchange for X without a third party. Suppose a vending machine executes a smart contract with you that only spends your Ethereum once it has dispensed your snack. Or suppose a driverless Uber only charges you once you have been dropped off. Or suppose Alice only pays Bob once Bob has paid Paul (note: this is the only scenario currently possible on Ethereum because the only information the smart contract has is the blockchain/transaction history).
+
+All of these things can be done much more efficiently with a program running in a data center somewhere—and at least a company could update or terminate the code when a bug is discovered.
+
+“But that’s not trustless and decentralized because I have to trust a central authority!” You are /always/ going to have to trust a counterparty when you are buying a good or service. >99.999% of transactions are done with companies; this is not likely to change ever, so the assumption is that smart contracts would be adopted by companies. Here are all the ways you still have to /trust/ someone: You would have to…
+
+1. trust that the company is reporting accurate information to the smart contract,
+2. trust that the company wrote the smart contract to not rob you (as if most people could even read the code themselves 🙄),
+3. trust that the company wrote the code without any bugs at all, ever, and
+4. trust that the Ethereum network wouldn’t get 51% attacked or otherwise exploited at any point during the execution of your smart contract.
+
+The sacrifices you would have to make for the Ethereum dream to work could only ever be taken up by someone with a radical political conviction in favor of it, not by any rational actor who seeks to maximize well-being. It has a significant real cost in order to solve  a non-existent imaginary problem.
+
+If people have a choice between some business practice that can potentially lose a ton of money and another that has almost no chance of that (centralized payment infrastructure), they will /always/ choose the one that won’t lose them money.
+*** decentralized apps “dApps”
+This is part of the “world computer” meme. Ethereum wants to create decentralized programs running on the Ethereum P2P network. The only successful example of this is [[https://en.wikipedia.org/wiki/CryptoKitties][a video game about cats]] that crashed the network (because who would have guessed…a bunch of users running a program on everyone’s computers has n×m complexity and is super inefficient).
+
+The problem: /It costs money every time you interact with a dApp./
+
+A dApp can’t function as, say, an alarm clock, because an Ethereum dApp only wakes up once someone pays money to it.
+
+If a rational human has a choice between paying for running software and an alternative that is free (centralized apps), they will /always/ choose the one that is free.
+*** scam ICOs
+I have a lot of respect for the creator of Ethereum. I think he had good intentions for the project, but unfortunately, the community seems to have been taken over by scammers looking to exploit the public’s greed for quick cash grabs (ICOs). The SEC explains [[https://www.sec.gov/ICO][the scam that is ICOs]] better than I could.
