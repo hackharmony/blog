@@ -3,7 +3,7 @@ markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
-permalink:        pretty
+permalink:        /:categories/:slug
 
 # Setup
 title:            Zelly Snyder
@@ -27,3 +27,7 @@ version: 0.0.1
 collections:
   software:
     output: true
+    label: Software
+  tutorials:
+    output: true
+    label: Programming Tutorials

@@ -1,0 +1,33 @@
+---
+layout: post
+title: Ways Cryptocurrency Will Die or Succeed Beyond Your Wildest Imagination
+categories: [cryptocurrency]
+---
+
+* As long as one person is running Bitcoin, it will always exist...so what?
+The two aspects of a currency are...
+1. its *technical implementation*; e.g., as gold, silver, gold-backed paper dollars, nothing-backed paper dollars, military-backed paper dollars, Bitcoin
+2. its success at achieving *social adoption*; e.g., how many people actually own or transact with the currency
+
+First, let’s address an obvious point about Bitcoin (or any decentralized cryptocurrency). Cryptocurrency is software. Cryptocurrency is software that forms a peer-to-peer network among those who run the [[https://bitcoin.org/en/full-node][full version of its software]], much like BitTorrent. As long as just one person is running the software on his or her computer, /technically/ the network is still alive, and the currency could be used. Whether one or 1 000 000 other people are running Bitcoin on their computers, I can still sign a transaction and hash it---thereby including it on the public blockchain shared by N other people and myself.
+
+Obviously, a payment network that consists of 2 people in its entirety is only a currency in name only and tenuously at that. At that point, it’s basically bartering with the cryptocoin representing one side of the barter. The idea of a currency /necessitates/ adoption as a precondition, not something that can be worked toward after boldly claiming currency status at the outset. This allows us to identify the other important aspect of currency besides its technical implementation details---social adoption.
+
+A major advantage of cryptocurrency is its “censorship-resistance.” As long as we have internet, a blockchain can be distributed without any means for the government to stop it. (Packets can be obscured, and in the most extreme cases [[https://en.wikipedia.org/wiki/Steganography][steganography]] can be employed to put Bitcoin transactions in Facebook pictures of your dog.) As long as:
+- There is internet.
+- There is electricity.
+Bitcoin can /technically/ always exist without obstruction from anyone including government.
+
+The list of /social/ criteria that must be fulfilled for Bitcoin to always exist is much longer. All of the ways Bitcoin can either die or succeed center around ways Bitcoin gains or loses social adoption.
+* Ways it can die
+“Bitcoin can’t die!” Yes it can.
+** Government starts imprisoning cryptocurrency users
+** Government
+** Technical problems
+As stated earlier, the reasons Bitcoin can fail or succeed are tied to its potential to gain market share as a purely social phenomenon, not its technical problems. However, for the sake of completeness, it’s worth mentioning the few ways Bitcoin can be compromised on a technical level.
+*** 51% attack
+*** SHA-256 gets cracked
+- Some genius mathematician discovers a preimage function for the SHA-256 hash function.
+- Quantum computing or some other miraculous advance in hardware allows reversing SHA-256.
+
+Either way, the Bitcoin market serves as a 100+ billion dollar bounty on cracking SHA-256. If anyone, except maybe a state actor, has cracked it, they would steal everyone’s private keys and become rich.

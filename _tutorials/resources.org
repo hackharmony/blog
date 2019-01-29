@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: Resources & Training Material
+subtitle: Collection of links, articles, tutorials, and book recommendations
 ---
 
 * What’s this?

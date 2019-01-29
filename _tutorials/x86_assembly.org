@@ -1,0 +1,63 @@
+---
+layout: page
+title: x86 Assembly Tutorial
+subtitle: Learn how to use assembly to debug your programs and reverse engineer other people’s programs
+---
+
+* The case for learning ASM
+** Curiosity
+You will always be a “lightweight” programmer unless you know assembly. Assembly is how the machine works[fn:1]. Working with high level languages is like putting together Lego blocks---the components for your project are neatly provided to you as modular pieces. These Lego pieces, although tremendously useful, are manufactured abstractions having semantics almost completely divorced from those of their actual runtime as electrons moving around on a circuit board. The advantage of knowing how to use assembly is a matter of insight. A programmer who knows how to use assembly has drawn back the curtains on computing to see beyond the high level charade. A programmer who knows how to use assembly has the power to take any mysterious, high level black box of a program and figure out what it does (and change what it does!) by disassembling it. This skill, once sufficiently honed, is a /superpower/. The overarching motivation for learning assembly is one of curiosity. Assembly is the logical endpoint for the curious student of computing who keeps asking, /How does it work?/
+
+The standard path for a high level programmer is to focus on the insides and outs of their high level tools---Java, Ruby, Linux, etc.---and basically ignore what happens on the CPU. The OS and virtual machines provide a usable mental model with which to successfully write applications. In 99% of cases, such application programmers would not be served by knowing assembly; in fact, it may be a hindrance since many high level mental models (e.g., Haskell or Mathematica) are so abstracted from the machine. There are two types of programmers[fn:2]:
+1. ones that focus on the ultra theoretical/high level space and thrive there; they use languages like Python, Java, Ruby, C#, and maybe dabble in functional languages
+2. ones that gravitate toward closer to the hardware; they tend to spend most of their time working with C or C++ and enjoy working on infrastructural systems with strict resource constraints like operating systems, compilers, or video games
+The latter category needs no convincing to know assembly. They have to know assembly. My goal here is to convince those in the first category to learn assembly.
+
+[fn:1] This is not entirely accurate. At one point in history, assembly opcodes did translate 1:1 to machine instructions. On modern Intel processors, there is a whole world below assembly instructions, the microcode, which is generally too low level for anyone but Intel engineers to worry about, let alone an application programmer who just wants to know assembly to better debug his or her high level programs.
+[fn:2] Of course there is significant overlap between these categories. Let’s not get overly pedantic. Most people specialize in one of these two clusters, though.
+** Native code is the future (medium-term, 5-30 years out)
+Knowing how to read +and write+ assembly is an amazing benefit to any programmer writing code for native platforms (e.g., C/C++, Rust, Swift, Golang). I predict that we will see a mass migration back to native code as hardware stops accelerating in step with the acceleration of demand for improved software. Over the past several decades, hardware has been improving exponentially, and this allowed software to also improve exponentially with little improvement in the efficiency of software development. Software development did the opposite and got less efficient, not surprisingly, as Moore’s law allowed software developers to get away with slower code. As has been discussed ad nauseum, Moore’s law is already over. (My CPU from 2011 was no more than 10-20% slower than the one I have now.) Eventually, either software will stop improving exponentially (disappointing everyone) or software people will have to finally innovate as hard as the hardware manufacturers did.
+
+Also, all the easy software---the kind that doesn’t have to be efficient because it’s simple---has already been done, often several times over at this point. The world doesn’t need a new messaging app or another todo list app. Those types of apps could be written in Python or PHP because they’re little more than thin wrappers over databases. New software will have to continue be exponentially more impressive. People are going to demand resource-intensive graphical experiences like VR and realtime computer vision applications, all supported by ultra-low latency servers in data centers (where 1 ms means millions of dollars). Unlike the messaging app, todo list, or Twitter of yesteryear, there’s no way the new generation of software can be written in super high level languages running on slow VMs; they will have to be efficient CPU/GPU-aware compiled code running on bare metal.
+
+Ironically, to be prepared for the future of software, you will need to know the ancient arts of assembly and C.
+** Being able to debug and reverse engineer
+Being able to mentally parse disassembly lets you judge what your code is actually doing on the bare metal; great for judging the overhead of your algorithms or figuring out what some obscure, undocumented API call is actually doing. Knowing ASM also gives you a superpower—you can debug, manipulate, crack, or hack anybody’s program, whether or not they gave you the high level source for it. The latter is probably the most attractive motivation for learning assembly and is the reason I got into it.
+** Embedded systems
+Another trend of computing is a movement away from bulky personal computers and adoption of small devices that do a few things really well. People are already getting rid of their laptops and just using their smartphones. The smaller the target, the more low level the code running on it has to be.
+** It will never be a wasted investment of time
+Learning the latest hipster language that compiles to JavaScript? Might be a good use of your time if it takes off, but there’s a good chance it will end up like 99% of its peers and die off in the dustbin of history.
+
+In your lifetime, I can guarantee that CPUs/GPUs will be basically the same. The older and more culturally ingrained a technology is, the longer it lasts. I wouldn’t be surprised if we’re still using the [[https://en.wikipedia.org/wiki/X86_calling_conventions#cdecl][C calling convention]] in year 2100.
+* Reference
+The only books you need for Assembly are the [[https://software.intel.com/en-us/articles/intel-sdm][official Intel manuals]].
+* Choosing an assembler
+* Hello World
+* Syntax
+** Instructions
+Symbolically, ASM is a very simple language. There are only 3 constructs:
+1. *label*
+2. *mnemonic/opcode*
+3. *argument*
+
+=label: opcode argument_1, argument_2, argument_3=
+
+There can be zero to 3 arguments. Some opcodes do not take any arguments.
+
+To analogize with traditional programming, the opcode is like a the name of a function. Every opcode may have different effects (obviously) and accordingly different semantics for its arguments.
+
+The label can be used as a place to jump to from other places in the code.
+** Intel vs. AT&T
+In Intel syntax, the first argument, =argument_1= is the /destination/ and =argument_2= serve as the source. In AT&T syntax, the first argument is the source, the second argument the destination.
+
+Intel syntax: =mov a 0x01= would copy the integer value of 1 into ~a~.
+AT&T syntax: =mov 0x01 a= would copy the integer value of 1 into ~a~.
+** Macros
+* Memory
+* Registers
+* Functions
+* Control flow
+* Arithmetic
+* Using objdump
+* Using gdb (GNU Debugger)
+* Reverse engineering

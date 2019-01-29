@@ -1,0 +1,59 @@
+---
+layout: post
+title: snake_case is better than CamelCase
+subtitle: Scientifically.
+categories: [bikeshedding]
+---
+
+#+OPTIONS: toc:nil
+* To underscore or not to underscore?
+I don’t get why underscoring isn’t the /de facto/ standard everywhere by now. It’s much easier to read. The underscore can be much more easily parsed by your mind as a separator. With objectOrientedEnterpriseAbstractFactoryCase, you have to intuit each token “manually,” relying on capitalization to separate words. I think that’s horrible.
+
+This post is about all the reasons you should stop using camel case and why you should use =snake_case= wherever you are allowed to.
+* Proven to be more readable
+Empirical testing for the win. [[https://ieeexplore.ieee.org/document/5521745][snake case is more readable]]. Time is money. Code is read 1000x more human-hours than it is written. Therefore the goal of naming conventions should be readability.
+
+#+begin_quote
+The use of eye-tracking equipment gives additional insight and overcomes some limitations of traditional data gathering techniques. One main difference is that subjects were trained mainly in the underscore style and were all programmers. While results indicate no difference in accuracy between the two styles, subjects recognize identifiers in the underscore style more quickly.
+#+end_quote
+
+This shouldn’t come to any surprise since the underscore is so visually similar to a space.
+* CamelCase forces you to deform natural language
+For example, the standard that the first word must be lowercase for Java member functions/variables…well what if that first word is semantically correct as uppercase?
+
+urlReader or URLReader? Nope, you’re not allowed to do the latter even though it makes sense.
+
+Underscores have no meaning in any natural language that I know of, so underscores can’t possibly ever conflict with semantic meaning in any word.
+
+Overloading capitalization is a bad idea.
+* If typing an underscore is so hard for you, make it easy
+I suspect a lot of the reason for camelCase is how easy it is to write capital letters compared to reaching for the underscore. Everyone already has a keen muscle memory for capitalization. For the average person, underscores are not often typed over and over.
+
+Separating two words in camelCase takes 1 Shift press and 1 key press of the first letter of the next word. Separating two words with =snake_case= takes 1 Shift press, 1 -_ press, and 1 key press of the first letter of the next word. Doesn’t seem like a lot, but it could add up over time and contribute to a bias against underscores.
+
+As I said before, this is a non-issue because code is read (and debugged by others) so many more times than it is written, so your comfort shouldn’t be so important. But you can always switch your - and _ keys so that you don’t have to keep pressing Shift for underscore but instead must press Shift for hyphen—reaching keystroke parity with camelCase. If you’re using Linux in graphical mode (X11/Wayland): 
+
+put this in your ~~/.profile~ or ~/.bash_profile~:
+#+BEGIN_SRC bash
+xmodmap -e 'keycode 20 = underscore minus underscore minus'
+#+END_SRC
+
+or put this in your ~~/.Xmodmap~:
+#+BEGIN_SRC bash
+keycode 20 = underscore minus underscore minus
+#+END_SRC
+
+“Just give me a hipster one-liner to copy and paste to my terminal”
+#+BEGIN_SRC bash
+cat "xmodmap -e 'keycode 20 = underscore minus underscore minus'" >> ~/.profile && source ~/.profile
+#+END_SRC
+* Capitalization doesn’t mean anything in many world languages
+It’s just English and other Indo-European languages that have this concept.
+* Looking beyond underscores---ideal naming convention for identifiers
+It has been said tongue-in-cheek that one of the biggest unsolved problems in programming is naming things. There’s a lot of truth to that, but I’d extend that to /how/ those names are displayed as well. =Snake_case= is a good step in the right direction; underscores being indistinguishable from spaces on a cursory visual scan.
+
+Why do we still have to make symbols oneword? *Why can’t we have spaces?* Yes, I know the reason—it’d be extremely complicated and every compiler’s parser on the planet would have to be rewritten. (Typical recursive descent parsers wouldn’t work for tokens that don’t have well-known delimiter(s).) Maybe parsers don’t have to be completely deterministic anymore. Maybe a programming language parser can be a statistical model that learns over time, correcting its weights whenever users occasionally encounter a case where it parsed incorrectly. But I know better than to bloviate about something like this without first writing the code to try the idea myself, so I’ll leave the /variables should be able to have spaces/ issue for another day.
+
+A better compromise that can be easily implemented is having delimiters around variable names. =$something like this$= or better yet, =|with bars on each side|=. Just as easy to write, but much more fluent. AnotherProblemWithCamelCase is that encoding the word separators with capitalization (camel casing) can be super lossy. Can you read anotherproblemwithcamelcase easily? What if someone’s weirdly spelled name or brand name is in there? Lots of hashtags end up decaying to its all-lowercased version. It’s really not that hard to write the ‘|’ character twice.
+
+(As an aside, I would much rather have seen #hashtags start off with a convention like this—maybe |bartags| which can express |more meaningful names| which are still searchable. Instead our #TrashHashtags will never be changed at this point, forever serving as a reminder to the world that we’re still using parsing and naming standards from the 1960s.)

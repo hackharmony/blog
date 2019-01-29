@@ -43,7 +43,7 @@ gtk-key-theme-name=Emacs
 *** Compile it yourself
 **** Why?
 - Optimize to your hardware
-- Use the ~lucid~ GUI toolkit for better looking text
+- Use the ~cairo~ or ~nextstep~ GUI toolkits for better rendered text
 **** recommended compilation flags
 --with-imagemagick --with-x-toolkit=lucid 'CFLAGS=-O3 -march=native'
 *** daemon and client
@@ -57,7 +57,7 @@ gtk-key-theme-name=Emacs
 #+BEGIN_SRC bash
 $ xset r rate [delay ms] [rate]
 #+END_SRC
-Recommended: xset r rate 160 180
+Recommended: ~$ xset r rate 210 170~
 *** mouse
 **** high acceleration 
 * macOS
@@ -85,7 +85,63 @@ do shell script "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nc"
 #+END_SRC
 * Windows
 ** keyboard repeat speed
-*** TODO find and publish the source of that Windows.h-calling code that changes keyboard repeat speed on Windows
+This is the only way to change the keyboard repeat settings beyond what you are allowed to change it to in the Control Panel. You need to compile and run this code.
+
+Use Visual Studio for the smoothest experience. Then execute the binary from command line like this: ~name_of_your_binary <delay ms> <repeat ms>~.
+#+begin_src
+#include <windows.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+BOOL parseDword(const char* in, DWORD* out)
+{
+  char* end;
+  long result = strtol(in, &end, 10);
+  BOOL success = (errno == 0 && end != in);
+  if (success)
+	{
+      *out = result;
+	}
+  return success;
+}
+
+int main(int argc, char* argv[])
+{
+  FILTERKEYS keys { sizeof(FILTERKEYS) };
+
+  if (argc == 3
+      && parseDword(argv[1], &keys.iDelayMSec)
+      && parseDword(argv[2], &keys.iRepeatMSec))
+	{
+      printf("Setting keyrate: delay: %d, rate: %d\n", (int)keys.iDelayMSec, (int)keys.iRepeatMSec);
+      keys.dwFlags = FKF_FILTERKEYSON | FKF_AVAILABLE;
+	}
+  else if (argc == 1)
+	{
+      puts("No parameters given, so displaying the current value of the key rate delay and speed settings:");
+      if (!SystemParametersInfo(SPI_GETFILTERKEYS, sizeof(FILTERKEYS), (LPVOID)&keys, 0)) {
+        fprintf(stderr, "System call ``SystemParametersInfo(SPI_GETFILTERKEYS, …)'' failed.");
+        return 2;l
+      }
+      printf("delay: %d, rate: %d\n", static_cast<int>(keys.iDelayMSec), static_cast<int>(keys.iRepeatMSec));
+      puts("Usage: keyrate <delay ms> <repeat ms>\nCall with no parameters to show the current setting.");
+      return 0;
+	}
+  else
+	{
+      puts("Usage: keyrate <delay ms> <repeat ms>\nCall with no parameters to show the current setting.\n\nN.B.: I recommend the settings delay=200 and repeat=6");
+      return 0;
+	}
+
+  if (!SystemParametersInfo(SPI_SETFILTERKEYS, sizeof(FILTERKEYS), (LPVOID)&keys, 0))
+	{
+      fprintf(stderr, "System call failed.\nUnable to set keyrate.");
+	}
+  printf("delay: %d, rate: %d\n", (int)keys.iDelayMSec, (int)keys.iRepeatMSec);
+
+  return 0;
+}
+#+end_src
 * Chromium / Google Chrome
 ** Recommended chrome://flags
 ** How to use the KDE file picker instead of the default GTK file picker
@@ -103,17 +159,76 @@ export XDG_CURRENT_DESKTOP=KDE
 exec chromium-browser "$@"
 #+END_SRC
 * Emacs
-- See my dotfiles/emacs.d repo
-- Take advantage of Language Server Protocol.
+** .emacs
+See my dotfiles/emacs.d repo
+** How to make Emacs your IDE
+- Take advantage of [[https://langserver.org][Language Server Protocol]]. It enables the modern refactoring tools and on-the-fly error checking of modern editors---but of course it takes some hacking (welcome to Emacs). Install lsp-mode, lsp-ui, and configure the language servers for the languages you use.
+- flycheck. ~M-x flycheck-list-errors~ to get a buffer with flycheck/lsp-ui warnings/errors that you can position at the bottom of your screen.
+- projectile. Projectile is a great Swiss army knife for navigating big projects.
+- magit.
+
+No matter how many packages you find/write, Emacs still won’t be as good as a full-featured proprietary IDE like IntelliJ, Visual Studio (not to be confused with VS Code, which is trash), XCode, or Android Studio. Know when to actually use an IDE; time is money. You can also run Emacs and an IDE at the same time, editing the same files, by using ~auto-revert-mode~ to prevent file conflicts.
+** How to compile Emacs
+#+BEGIN_SRC bash
+$ git clone -b master git://git.sv.gnu.org/emacs.git
+$ cd emacs
+$ ./autogen.sh
+# Recommended for GNU/Linux:
+$ ./configure --prefix=$HOME --enable-link-time-optimization --with-cairo --with-x-toolkit=gtk3 --without-toolkit-scroll-bars CFLAGS="-Ofast -march=native -falign-functions=64"
+# Recommended for macOS:
+$ ./configure --prefix=$HOME --with-ns --enable-link-time-optimization --with-cairo --without-toolkit-scroll-bars CFLAGS="-Ofast -march=native -falign-functions=64"
+$ make
+$ make install
+#+END_SRC
+
+The ~--prefix=$HOME~ part installs Emacs in your $HOME directory. You can leave this blank instead for Emacs to be installed globally to ~/usr/local~ by default.
+
+Why compile yourself? You can make your own changes like...
+*** Compiling against the Cairo graphical toolkit on GNU/Linux
+Be sure to use the ~--with-cairo~ flag on GNU/Linux. It uses the Cairo graphical toolkit to render the GUI client. Cairo uses vector graphics. It looks /a million/ times better than the default GTK 👎. This is despite there still being some random bugs here and there with the Cairo implementation.
+*** Edit Emacs source to allow native multicolored emojis on macOS
+At one point, you could have used macOS emojis in graphical Emacs. Then the GNU maintainers [[https://git.savannah.gnu.org/cgit/emacs.git/commit/?id=9344612d3cd164317170b6189ec43175757e4231][decided to disable that]] because GNU/Linux didn’t have support for multicolored fonts---the idea being to not provide a better version of their software on a third-party proprietary platform when the goal of the GNU Project is to promote free software.
+
+#+BEGIN_SRC bash
+# Revert the offending commit
+$ git clone git://git.sv.gnu.org/emacs.git
+$ git revert 9344612d3cd164317170b6189ec43175757e4231
+$ git commit -m 'reinstates emojis on macOS'
+# ...and follow the instructions as above for compiling
+#+END_SRC
+
+For Emacs on macOS, you constantly see suggestions to use Aquamacs, “Emacs for MacOS X”, or some other third party Emacs package. /Don’t do this./ You /don’t/ need to install some third-party Emacs fork to use Emacs on macOS (or Windows). Are you going to audit their code and binaries for exploits? Are you confident the maintainer will keep rebasing with the upstream GNU repo on time? No? Then just use the GNU distribution and edit it as necessary.
 * Hardware/Firmware
 ** Reduce blue light from monitors
 Blue light is [[https://phys.org/news/2018-08-chemists-blue.html][harmful and permanently damaging to your retinas]].
+*** Desktop computer monitors
+If you’re using a traditional desktop computer setup with monitors, /change the monitor settings directly/ to limit blue light. Don’t bother using software like “f.lux” or the like which adds an iffy process eating up RAM and CPU time all the time (not to mention running unaudited code on your system).
 1. Toggle the on-screen menu.
 2. Find the screen for colors or color management.
 3. Set any and all of these to 0
    1. blue
    2. cyan
    3. magenta
+*** MacBooks
+The only native way to limit blue light on MacBooks is to enable “Night Shift”. Select a custom schedule that runs 23 hours and 59 minutes per day, like 4:00am to 3:59am.
+*** iPhones
+Same as the instructions for MacBooks above. Display → Brightness → Night Shift.
+*** Other laptops
+As far as I know, unless you can get lucky finding some settings in your BIOS, you will have to install third party software like Redshift on Linux.
+** Keyboards
+The name of the game is to avoid RSI/carpal tunnel syndrome.
+*** Mechanical keyboards
+Mechanical keyboards are a revival of the ancient technology used by IBM Model M keyboards.
+
+#+CAPTION: If you are old enough, you remember these. In the 2000s they were piled in corporate dumpsters but now thanks to the hype they are worth a lot of money.
+#+NAME: IBM_Model_M_keyboard
+[[https://upload.wikimedia.org/wikipedia/commons/4/48/IBM_Model_M.png]]
+
+Many people swear by mechanical keyboards. Despite claims by the fanatics, there is no reason to believe they prevent RSI or even improve typing speed. In fact, if you choose the wrong type of switch, mechanical keyboards can /worsen/ RSI. Cherry MX Green switches require you to bottom out on every keypress, which can put tremendous strain on your wrist muscles/tendons.
+
+Having used mechanical keyboards for years, the real reason to use mechanial keyboards is the subjective satsifaction you get when typing with them. Typing == productivity, so anything that incentivizes typing is a Good Thing.
+*** Use sticky keys
+A major culprit of RSI is keyboard shortcut combinations.
 * Jekyll
 ** Use org-mode without any fuss
 Install [[https://github.com/hackharmony/jekyll-org-to-html][my Jekyll converter plugin for using org-mode markup in a Jekyll site]]. It uses Emacs directly—using Emacs’s mature, native org-mode HTML export command rather than reinventing a separate org-mode exporter. There are no surprises to deal with if you are a regular org-mode user.

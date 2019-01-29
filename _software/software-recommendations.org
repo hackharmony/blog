@@ -4,7 +4,7 @@ title: Software Recommendations
 subtitle: A curated list of the best software, programming languages, or development tools you should choose depending on your use case
 ---
 
-#+OPTIONS: toc:t
+#+OPTIONS: toc:t h:8
 * Abstract
 This is a curated collection of software that I recommend and brief reviews. It’s basically your ultimate guide to computing effectively. I have a bias toward software with free and open source licenses. Where I choose proprietary alternatives otherwise is always for very good reason.
 * Operating system
@@ -21,7 +21,13 @@ As much as I wanted to like Mozilla Firefox, I have stopped fighting the trend. 
 Prefer Chromium over Google Chrome. Why? It has slightly less spyware built in, and you are free to compile it yourself in the spirit of free software.
 * Text editor / IDE
 ** editor
+Yes, it’s time for that childish argument.
 *** GNU Emacs
+I know it’s [[https://en.wikipedia.org/wiki/Imprinting_(psychology)#Baby_duck_syndrome][baby duck syndrome]], but I ♥ Emacs and will never stop using it. Thanks to [[https://langserver.org][Language Server Protocol]] you can get feature parity with VS Code/Atom and other flavor-of-the-month editors. So I’m happy. (But that’s still quite long way from a real IDE like Visual Studio for C++.)
+
+You can survive in Emacs by writing long bits of code in Emacs while having an IDE open in the same project for doing everything else.
+*** Vim
+Vim is what I originally started with. It’s great but you’ll find yourself wanting more features than just a text editor.
 ** IDE
 *** Visual Studio
 If you are doing any kind of development for Windows systems, you would be a fool to use anything but Visual Studio. (N.B., I’m not talking about /Visual Studio Code/. I’m not a fan of VS Code.)
@@ -44,40 +50,44 @@ Shell scripts aren’t “real” languages. They don’t have utilites for abst
 
 There are some people who use IPython as their system shell and never touch bash. I think that’s a little extreme, but it’s certainly possible.
 * Programming languages
-As always, my mantra is: /Use the right tool for the job!/ Nevertheless, I will review my favorite languages here.
-** For the pedantic: Languages vs. Runtimes
+/“Use the right tool for the job!,”/ you hear condescendingly from the mature people whenever you talk about favorite programming languages. But I think this view is dated in today’s world since there are several competing popular languages/environments for every domain of software development. Some of them have to be objectively bad, the metric being their amenability to producing good software. I don’t and can’t accept the idea that X language is /just as good/ as Y no more than I accept that PHP and Python are on the same level because they’re both Turing complete.
+** TODO For the pedantic: Languages vs. Runtimes
+** How to judge programming languages
+You judge programming languages by judging the programs that have been developed using it. And the way you judge programs is by seeing the market response by the users of those programs.
+
+The /worst/ way to judge a programming language is to judge it by how it relates to programmer sensibilities. What a programmer (no matter what skill level) thinks the best language is, is barely a relevant question. They don’t matter. The bad programmers will say the language they have used the most because they only know one or two languages. The good programmers will tell you Haskell is the best language because they see programming as a fun intellectual game rather than an industrial endeavor like drilling for oil. In general, you shouldn’t judge a field by what the people within the field say because it will eventually lead to abstract academic bloviating divorced from any real world stress-testing that an exposure to actual users would reveal.
+
+The older a programming language, the better. If an old language is still being used enough for you to care about it, it survived brutal selection in the free market. You win no points by being an early adopter of a technology tool, only a massive risk of your precious time. Joe Programmer can just as easily pick up your pet tool a few years down the line if it miraculously lasts that long and gains traction. Within a couple months, Joe Programmer now is [[https://en.wikipedia.org/wiki/Pareto_principle][80%]] as functionally skilled as you are. On this basis I would argue that you are better off learning COBOL and FORTRAN than any language created in the past 10 years. More on this in other writings.
+
+Last on the list, I consider the /aesthetics/ of the language to be important. I’m not talking about syntax per se. Code in an Aesthetic Language gives you a feeling of freedom and makes you happy to see it. An Aesthetic Language makes it very easy to write easy-to-read code. You /feel/ like you can do anything with the language because the syntax isn’t holding you back. The most Aesthetic Language that comes to mind is Common Lisp---you are stripped of all the limitations of traditional structured programming languages and are free to express yourself in constructs you make yourself (Lisp macros). Ruby is also an Aesthetic Language. By contrast, an Ugly Language is C because everything is either an if statement, a glorified goto/jump, or a for loop, forcing you to encode your solution space in this tiny vocabulary as if you’re an assembly programmer from the 1970s. This is completely my personal take; feel free to dismiss this aspect of programming language selection. But I’d rather live in a world with less PHP even though PHP is probably one of the top 3 programming languages by the amount of wealth generated (read: Facebook).
 ** Languages
 *** by use case
-**** general purpose
+**** large projects
 1. C++
 2. Java
-3. Common Lisp
-4. Rust
 **** scripting
 1. Ruby
 2. Python
 3. Lua
 **** science/stats/machine learning
 1. Python
-2. C++
-3. Mathematica
-4. R
+2. Mathematica
+3. C++
 **** web services
 1. Golang
 2. Java
 3. Ruby
-**** web frontend
-1. TypeScript
-2. JavaScript (latest ECMAScript standard)
-3. ClojureScript
-**** mobile apps
-1. Swift
-2. Kotlin
-**** Windows
-1. C#
-2. C++
+**** doing something new and revolutionary
+1. C++
+2. Common Lisp
+3. Rust
 *** Reviews
 **** C++
+I love C++. Why? Because you’re running a program(s) written in C++ to read this right now. It’s faster than everything, and it can do everything better than anyone else can. It can go as low level as inline ASM, backwards compatibility with C, then all the way up to modern Python-esque abstraction facilities. It has features for everything, the whole kitchen sink, and that’s a good thing.
+
+I don’t care how hard it is to use. The ends justify the means here.
+
+100 years from now I guarantee you, barring civilizational collapse, you will still be using C++ binaries and there will still be people writing C++.
 **** Common Lisp
 ***** recommended implementation
 SBCL
@@ -87,15 +97,16 @@ SBCL
 - [[https://www.jwz.org/doc/worse-is-better.html][Worse Is Better]]
 **** Scheme
 ***** best implementations
+****** Chez Scheme
+- Compiles to very efficient machine code; ideal for deployment
+- Used by Cisco for years before they open sourced it
+- Author is a genius
 ****** GNU Kawa
 - Compiles to portable JVM bytecode
 - Entire JVM ecosystem available with convenient interop syntax
-****** Chez Scheme
-- Compiles to very efficient machine code; ideal for deployment
-- Unfortunately, no libraries
 ****** Racket
 - Easiest to get started with
-- Con: Not really Scheme
+- Con: Not really Scheme. Tries too hard to be a functional language. (Scheme and LISP style languages in general are /not/ functional languages, nor should they be.)
 **** Golang
 Golang is basically a DSL for writing web servers and web services. It is /phenomenal/ at this. Golang gives you all the batteries you need to write very good web and networking software and the battle-testedness that comes with it being used by big corporations for this purpose.
 
@@ -103,7 +114,6 @@ You shouldn’t use it for much else though. Well, it’s good as an alternative
 **** JavaScript
 **** Java
 Java gets far too much hate. It’s the best language and ecosystem for almost 99% of applications.
-**** Clojure
 **** Ruby
 **** Python
 **** Mathematica
@@ -113,27 +123,47 @@ Java gets far too much hate. It’s the best language and ecosystem for almost 9
 **** C
 The triumph of C was one of the greater tragedies in the history of computing (and perhaps the history of humanity). The entire computer security industry would not exist without C. It is broken by design. Programmers having access to pointers to raw memory was a mistake. C is behind every security vulnerability or software crash that cost society trillions of dollars or countless human lives whenever critical systems have crash for “unknown” reasons. Every C programmer thinks he or she is going to be the one who is smart enough to never make these serious mistakes; they laugh when you tell them to sacrifice a tiny bit of performance for a memory/type safe language instead. Nah, Python and Java are for wimps.
 
-The worst part is that the C mental model isn’t even how CPUs work anymore. Where’s the C semantics for CPU caches? Or SIMD vectorization? Compiler authors have worked very hard to infer educated guesses about the correct instructions from C code, because C code is unable to express these intents. C is hardly “close to the metal”—it’s only by accident because the compilers are so advanced.
+The worst part is that the C mental model isn’t even how CPUs work anymore. Where’s the C semantics for minimizing cache misses? Or SIMD opcodes? Or GPU programming? You have to use compiler extensions and vendor specific DSLs. Compiler authors have worked very hard to infer educated guesses about the correct instructions from C code, because C code is unable to express these intents. C as a language is hardly “close to the metal”---it’s only so by accident because the compilers are so advanced.
 
-Don’t use C. Ever. Use modern C++20 and get literally the exact same performance at significantly less risk for catastrophic failure. If you are willing to experiment, and sacrifice only a small amount of performance, opt for Rust instead.
-**** Perl
-Spaghetti code.
-**** Visual Basic
+Don’t use C. Boycott C. Use modern C++20 and get literally the exact same performance at significantly less risk for catastrophic failure.
+**** Visual Basic.NET
+I have never used this one, but I still feel entitled to badmouth it because it’s BASIC after all.
 **** PHP
-Spaghetti code.
+Spaghetti code. Spaghetti code everywhere.
+
+The most important thing to learn from PHP, as a programming language critic, is how important Time To Hello World is. PHP owes basically all of its success to the fact that you can, with minimal to zero configuration on most servers, write something like this:
+
+#+BEGIN_SRC php
+<html><body><h1>Welcome,
+<?php
+$s = $mysqli->prepare("select name from customers where id=?");
+$s->bind_param("i", $_GET["id"]);
+$s->execute();
+$row = $s->get_result()->fetch_assoc();
+echo $row["name"];
+?>
+</h1></body></html>
+#+END_SRC
+
+...and just like that, you can hack together the controller, model, and view for a webapp all in one go. Of course for anything non-trivial, this could easily and does get out of hand.
+
+There is no technical reason for the language’s success. It has more warts than JavaScript did in the Internet Explorer days. I’m convinced its adoption is just because LAMP servers were so widely deployed in the 2000s, and anyone could get started with PHP without having to fiddle with compilers, build scripts, external libraries, or any of the things used in contemporary software development. It was the Visual Basic for the web.
+
+If I were designing a programming language hoping for it to be widely adopted, I would make sure it passes the PHP Test: /Does it let me bootstrap a webapp (or perhaps a mobile app) just by writing one text file and uploading it somewhere?/
+**** Perl
+Dead camel
 **** Clojure
-It’s not a LISP. It sacrifices a lot to be compatible with Java. Many of the best features of Common Lisp are missing in Clojure. Clojure is also basically unmaintained, being an in-house tool for Rich Hickey’s company first and a community open source language second. Just use Common Lisp.
+Clojure is not LISP. It sacrifices way too much to run on the JVM. (Not that I think being a hosted language was a bad idea---it just should have been LLVM.) Clojure is an internal tool used by Rich Hickey’s database company. It’s slower than Java. No one is adopting it. Expect to spend a lot of time reading the source of Clojure to figure out how all the black boxes work. Use it at your own risk.
+
+If you really need to use a LISP and can’t use SBCL/LispWorks/etc. for some reason, go for Clojure of course. But you don’t /really/ need to use LISP unless you can also use SBCL. I fail to see the motivation for using this.
 *** Useless But Fun Hobby Languages
 Only devote time to these if you literally have nothing better to do, or are doing a Ph.D. on programming language theory. They explore very interesting ideas, but rest assured, these ideas will be incorporated in mainstream languages if they are proven good enough.
-**** Idris
-Dependent types are potentially a game changer. Problem is, I can’t think of many practical uses for them aside from the canonical example of vector bounds checking.
-**** Scheme
 **** Haskell
 The most important thing you can learn from Haskell is when to give up learning something.
 
-It’s a very beautiful language, but with the mental energy required to get good at it, you could have done so many other things. Personally, I learned the basics of the language up until I got to lenses and monad transformers; then I gave up, putting it on hold until some future time.
+Haskell is a very beautiful language, but with the mental energy required to get good at it, you could have done so many other things. Personally, I learned the basics of the language up until I got to lenses and monad transformers; then I gave up, putting it on hold until some future time. On top of the core language, there is also the ever-growing [[https://wiki.haskell.org/Language_extensions][Haskell language extensions]], which Haskell programmers actually make frequent use of. There is basically no end to the rabbit hole for Haskell. Some people have written Haskell for 5+ years and still haven’t grasped the whole thing. It’s absolutely daunting with little real use cases to motivate you to keep learning.
 
-Even if you are a wizard at Haskell, you won’t be able to write many useful programs with it—comfortably—because of how awkward it is at handling side effects. Network connections, IO on databases, drawing graphics, interacting with hardware—this is the bread and butter of real world programming. Have fun doing that in Haskell all day.
+Some consolation: Even if you are a wizard at Haskell, you won’t be able to write many useful programs with it—comfortably—because of how awkward it is at handling side effects. Network connections, IO on databases, drawing graphics, interacting with hardware—this is the bread and butter of real world programming. Have fun doing that in Haskell all day.
 
 Since everyone touts Haskell “because it makes you a better programmer,” why not get that benefit without wasting time trying to write programs in Haskell? Just learn these memes:
 
@@ -142,6 +172,12 @@ Since everyone touts Haskell “because it makes you a better programmer,” why
 - applicative functors
 - fmap, join, bind; [[https://en.wikibooks.org/wiki/Haskell/Category_theory][elementary category theory]]
 - [[https://wiki.haskell.org/Typeclassopedia][monads]]
+**** Idris
+Dependent types are potentially a game changer. Problem is, I can’t think of many practical uses for them aside from the canonical example of vector bounds checking.
+
+Speaking completely from ignorance, I feel like a lot of the promises from the functional programming world smell like [[http://wiki.c2.com/?GoldenHammer][GoldenHammer]] propositions. Everyone wants some magic tool to prevent them from writing bugs.
+**** Scheme
+Read SICP.
 **** CoQ
 * Databases
 ** RDBMS
@@ -154,15 +190,16 @@ Since everyone touts Haskell “because it makes you a better programmer,” why
 * Fonts
 ** serif
 *** Charter
-Ideal for body text.
+Ideal for body text. I believe that serif fonts are more readable. Charter is one of the best serif fonts I have come across, and it’s available for free.
 *** Publico Text
-*** Leitura News
 ** monospace (for code)
 *** Go Mono
+[[https://blog.golang.org/go-fonts][Go Mono]] is part of a family of fonts from the Golang team. Unlike any other monospaced
+*** Fira Mono
 *** Operator Mono
-The Lamborghini of programming fonts.
-*** IBM Plex
-*** Fira Code?
+The Lamborghini of programming fonts. This is, as of the time of writing, [[https://www.typography.com/fonts/operator/styles/][the most expensive programming fonts]]. It does look good.
+*** IBM Plex Mono
+*** Menlo
 ** sans serif
 *** Adelle Sans
 *** San Francisco
@@ -184,13 +221,11 @@ Clementine (?)
 * Office
 ** Word processor
 *** academic
-LaTeX
+\( \LaTeX \)
 *** lightweight markup
-1. org-mode
-2. markdown
-3. s-exp code (?)
+org-mode all the way. Markdown is trash.
 *** everything else
-Microsoft Word
+Microsoft Word. Don’t fight the world by using LibreOffice, Pages, Google Drive, or whatever you think is acceptable.
 ** Presentation
 Apple Keynote
 ** Spreadsheet
@@ -208,7 +243,7 @@ LibreOffice is horribly bad. I guess it’s good that Linux users have /some/ na
 ** Monero ($XMR)
 This is one of the best cryptocurrencies and probably the only one besides Bitcoin that will still be used in 20 years. Monero implements the ideal of cryptocurrency as an anonymous, fungible, censorship-resistant electronic cash.
 ** Ethereum ($ETH)
-Scam destined for failure. It’s based on this idealistic “world computer” meme that while interesting has no reason to involve currency at all except to be a cash grab. Smart contracts are a joke—I can much more easily implement “smart contracts” using fiat and traditional payment gateways than by using some decentralized mess.
+[[https://blog.bitmex.com/ether-a-double-digit-shitcoin/][Scam]]. It’s based on this idealistic “world computer” meme that while interesting has no reason to involve currency at all except to be a cash grab. Smart contracts are a joke—I can much more easily implement “smart contracts” using fiat and traditional payment gateways than by using some decentralized mess.
 *** the JavaScript problem
 The idea of smart contracts is to have programs running on a P2P network that decide to spend a certain amount of Ethereum tokens. Problems:
 
@@ -242,3 +277,5 @@ A dApp can’t function as, say, an alarm clock, because an Ethereum dApp only w
 If a rational human has a choice between paying for running software and an alternative that is free (centralized apps), they will /always/ choose the one that is free.
 *** scam ICOs
 I have a lot of respect for the creator of Ethereum. I think he had good intentions for the project, but unfortunately, the community seems to have been taken over by scammers looking to exploit the public’s greed for quick cash grabs (ICOs). The SEC explains [[https://www.sec.gov/ICO][the scam that is ICOs]] better than I could.
+** Grin/MimbleWimble
+Very promising technology in its infancy. It’s staunchly not a scam cash grab like nearly every other alt coin. It was designed to be used as trustless and anonymous cash. Since it has permanent inflation, it is unlikely to ever inspire a Ponzian sentiment and attract hoarders who would drive up the price. It’s most likely going to go to zero, and that’s a shame.
