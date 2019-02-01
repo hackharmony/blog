@@ -43,9 +43,7 @@ gtk-key-theme-name=Emacs
 *** Compile it yourself
 **** Why?
 - Optimize to your hardware
-- Use the ~cairo~ or ~nextstep~ GUI toolkits for better rendered text
-**** recommended compilation flags
---with-imagemagick --with-x-toolkit=lucid 'CFLAGS=-O3 -march=native'
+- Configure ~--with-cairo~ to compile with the Cairo graphics drawing library for better rendered text
 *** daemon and client
 ** Terminal emulator
 ** Shell
@@ -144,6 +142,20 @@ int main(int argc, char* argv[])
 #+end_src
 * Chromium / Google Chrome
 ** Recommended chrome://flags
+- improve aesthetics
+  - [[chrome://flags/#lcd-text-aa]]
+  - [[chrome://flags/#smooth-scrolling]]
+  - [[chrome://flags/#enable-font-cache-scaling]]
+- add utility
+  - [[chrome://flags/#show-saved-copy]]
+  - [[chrome://flags/#save-page-as-mhtml]]
+  - [[chrome://flags/#enable-scroll-anchor-serialization]]
+- improve security
+  - [[chrome://flags/#pdf-isolation]]
+- use the latest and greatest features
+  - [[chrome://flags/#enable-future-v8-vm-features]]
+  - [[chrome://flags/#enable-javascript-harmony]]
+  - [[chrome://flags/#upcoming-ui-features]]
 ** How to use the KDE file picker instead of the default GTK file picker
 The default file picker is the ugly GTK file picker, which can’t show thumbnails for images. The KDE file picker, kdialog, is much better; it has thumbnails and sorting abilities. Chrom{e, ium} won’t use kdialog unless you run it like this:
 
@@ -160,7 +172,7 @@ exec chromium-browser "$@"
 #+END_SRC
 * Emacs
 ** .emacs
-See my dotfiles/emacs.d repo
+See my ~.emacs.d~ folder in my ~dotfiles~ repo on Github. It’s a continual work in progress. Fiddling with Emacs is my favorite method of procrastination.
 ** How to make Emacs your IDE
 - Take advantage of [[https://langserver.org][Language Server Protocol]]. It enables the modern refactoring tools and on-the-fly error checking of modern editors---but of course it takes some hacking (welcome to Emacs). Install lsp-mode, lsp-ui, and configure the language servers for the languages you use.
 - flycheck. ~M-x flycheck-list-errors~ to get a buffer with flycheck/lsp-ui warnings/errors that you can position at the bottom of your screen.
@@ -174,7 +186,7 @@ $ git clone -b master git://git.sv.gnu.org/emacs.git
 $ cd emacs
 $ ./autogen.sh
 # Recommended for GNU/Linux:
-$ ./configure --prefix=$HOME --enable-link-time-optimization --with-cairo --with-x-toolkit=gtk3 --without-toolkit-scroll-bars CFLAGS="-Ofast -march=native -falign-functions=64"
+$ ./configure --prefix=$HOME --enable-link-time-optimization --with-cairo --with-x-toolkit=lucid --without-toolkit-scroll-bars CFLAGS="-Ofast -march=native -falign-functions=64"
 # Recommended for macOS:
 $ ./configure --prefix=$HOME --with-ns --enable-link-time-optimization --with-cairo --without-toolkit-scroll-bars CFLAGS="-Ofast -march=native -falign-functions=64"
 $ make
@@ -185,7 +197,11 @@ The ~--prefix=$HOME~ part installs Emacs in your $HOME directory. You can leave 
 
 Why compile yourself? You can make your own changes like...
 *** Compiling against the Cairo graphical toolkit on GNU/Linux
-Be sure to use the ~--with-cairo~ flag on GNU/Linux. It uses the Cairo graphical toolkit to render the GUI client. Cairo uses vector graphics. It looks /a million/ times better than the default GTK 👎. This is despite there still being some random bugs here and there with the Cairo implementation.
+Cairo is a graphics drawing API. It uses vector graphics. It looks /a million/ times better than the default.
+
+But unfortunately, you can’t use it. One day this recommendation will work. One day Emacs will support Cairo, or some other graphics drawing library that will allow it to render text and images efficiently---and with hardware acceleration---without screen tearing, crashing on large files, or navigating choppily. I tried to take a stab at it, but the Emacs C code is so ancient, hacky, and cluttered (20k+ LOC per file); I gave up.
+
+To try Cairo, configure with the ~--with-cairo~ flag on GNU/Linux.
 *** Edit Emacs source to allow native multicolored emojis on macOS
 At one point, you could have used macOS emojis in graphical Emacs. Then the GNU maintainers [[https://git.savannah.gnu.org/cgit/emacs.git/commit/?id=9344612d3cd164317170b6189ec43175757e4231][decided to disable that]] because GNU/Linux didn’t have support for multicolored fonts---the idea being to not provide a better version of their software on a third-party proprietary platform when the goal of the GNU Project is to promote free software.
 

@@ -23,23 +23,46 @@ Prefer Chromium over Google Chrome. Why? It has slightly less spyware built in, 
 ** editor
 Yes, it’s time for that childish argument.
 *** GNU Emacs
-I know it’s [[https://en.wikipedia.org/wiki/Imprinting_(psychology)#Baby_duck_syndrome][baby duck syndrome]], but I ♥ Emacs and will never stop using it. Thanks to [[https://langserver.org][Language Server Protocol]] you can get feature parity with VS Code/Atom and other flavor-of-the-month editors. So I’m happy. (But that’s still quite long way from a real IDE like Visual Studio for C++.)
+I know it’s [[https://en.wikipedia.org/wiki/Imprinting_(psychology)#Baby_duck_syndrome][baby duck syndrome]], but I ♥ Emacs and don’t see myself going away from it as my daily driver.
 
-You can survive in Emacs by writing long bits of code in Emacs while having an IDE open in the same project for doing everything else.
+Thanks to [[https://langserver.org][Language Server Protocol]] you can get feature parity with VS Code/Atom and other flavor-of-the-month editors. So I’m happy. (But that’s still quite long way from a real IDE like Visual Studio for C++.)
+
+Pros:
+- Fully programmable with Emacs Lisp---no need to wait for an IDE vendor to come out with a feature you wanted because you can write it yourself with Emacs’s comprehensive API
+- You can do almost everything in Emacs---it’s its own little OS not unlike Chrome
+- Productivity gains are near permanent because you can take Emacs with you everywhere. Let’s say you learned something new about Emacs or wrote a Lisp function that lets you shave off 10 minutes from your daily workflow. That one improvement that took you a few minutes to hack together can add up to weeks of time saved over your entire career, freeing up more time to improve your workflow even more (that’s how much Lispers love recursion).
+- Will be around in 10, 20, 30, 40 years from now and still have a community of maintainers and active users. Will your fad IDE still be used? Will the company sponsoring it even exist by then?
+- Hacking on Emacs is fun and a great way to waste time
+Cons:
+- Default keybindings are inherently RSI-inducing. For your health, use completely different keybindings for editing. I use evil-mode to emulate Vim’s objectively superior keybindings. Most RSI comes from doing complicated key chords where you have to hold down multiple far away keys at once. Avoid/remap key chords where possible and/or use Sticky Keys.
+- The kernel code is very old. It’s very complicated, spaghetti-ish C code.
+- The Elisp interpreter is /sloooow/. I haven’t measured, but it may actually be slower than Ruby.
+- Graphical Emacs is very buggy compared to modern editors. Displaying text can take a long time. Opening a very large text file can hang your entire system.
+- Using Emacs will make you look very old.
+
+I don’t recommend religiously using Emacs only. It’s just a tool, and a bad one for many tasks. The whole point of Emacs, in my opinion, is to save time. If you’re writing Java, C#, or mobile apps, you’re not saving time by using Emacs to do it, you’re wasting yours and everyone else you’re working with’s time. Also, believe it or not 🙃: You can run Emacs /and/ an IDE at the same time to work on the same project. Crazy stuff, I know.
+*** VS Code
+VS Code is the best of the next-generation crop of text editors built on Electron/node.js. It’s the killer for Sublime Text and all those proprietary text editors which never really needed to exist (especially as closed source and for-pay). I understand not everyone will want to use Emacs or Vim (and I definitely don’t blame them)---VS Code is a fine generalist editor. It fills a similar position that Emacs does (in spirit): It’s basically an IDE in terms of feature set but isn’t tied to a specific language, OS, or runtime environment. It’s also relatively easy to customize and write extensions for (cf. Atom, Sublime Text, and others), but still nothing as easy as writing Elisp.
+
+Microsoft continues to [[https://www.youtube.com/watch?v=Vhh_GeBPOhs][prioritize the experience of developers]], a solid business strategy that will lead them to prosperity for decades to come.
 *** Vim
-Vim is what I originally started with. It’s great but you’ll find yourself wanting more features than just a text editor.
+Vim is what I originally started with. It’s great, but if that’s all you use, you’ll find yourself wanting more features than just a text editor.
+
+Clearly a lot of thought went into vi keybindings. I have to admit they are highly productive. I use evil-mode in Emacs and vi emulators in any other IDEs I use.
 ** IDE
 *** Visual Studio
-If you are doing any kind of development for Windows systems, you would be a fool to use anything but Visual Studio. (N.B., I’m not talking about /Visual Studio Code/. I’m not a fan of VS Code.)
+If you are doing any kind of development for Windows systems, you would be a fool to use anything but Visual Studio. (N.B., I’m not talking about /Visual Studio Code/.)
 
 Visual Studio is hands down the best C++ IDE ever.
+*** IntelliJ
+Best IDE for Java.
 *** XCode
 *** Eclipse?
 * Shell
 ** bash
 ** zsh
 ** Python or Ruby
-If you have to write a script that will ever be used again in the future by you or someone else, then don’t write it in shell script. Please use Python or Ruby (not Perl—that’s as unreadable as shell). Shell script is for one-off actions.
+If you have to write a script that will ever be used again in the future by you or someone else, then don’t write it in any shell script. Please use Python or Ruby (not Perl—that’s as unreadable as shell). Shell script is for one-off actions.
 
 Shell scripts aren’t “real” languages. They don’t have utilites for abstraction beyond just subroutines. Shell scripts aren’t maintainable. It’s a lot harder to read shell script. Everyone knows Python and Ruby. Use one of those.
 
@@ -83,9 +106,13 @@ Last on the list, I consider the /aesthetics/ of the language to be important. I
 3. Rust
 *** Reviews
 **** C++
-I love C++. Why? Because you’re running a program(s) written in C++ to read this right now. It’s faster than everything, and it can do everything better than anyone else can. It can go as low level as inline ASM, backwards compatibility with C, then all the way up to modern Python-esque abstraction facilities. It has features for everything, the whole kitchen sink, and that’s a good thing.
+The ultimate industrial powerhouse Swiss army knife of languages.
+
+You’re running a program(s) written in C++ to read this right now. It’s faster than everything, and it can do everything better than anyone else can. It can go as low level as inline ASM, backwards compatibility with C, then all the way up to Pythonic hipster one-liners. It has features for everything, the whole kitchen sink, and that’s a good thing.
 
 I don’t care how hard it is to use. The ends justify the means here.
+
+C++ (or C) being behind almost every good piece of software in existence is kind of proof that you shouldn’t listen to what programmers say about what languages are the best. C++ is one of the most hated languages. Yes, it’s memory unsafe. Yes, it’s dangerous. Yes, it’s needlessly complicated. Yes, it has way too many features, most of which are bad. Ever considered that (shockingly) maybe these are necessary side effects of the reasons for its success, and the abstract criteria by which it is criticized actually don’t matter. After a ruler keeps giving inaccurate measurements for tables over and over, when do you stop blaming the table manufacturers and start looking for a new ruler instead?
 
 100 years from now I guarantee you, barring civilizational collapse, you will still be using C++ binaries and there will still be people writing C++.
 **** Common Lisp
@@ -194,12 +221,12 @@ Ideal for body text. I believe that serif fonts are more readable. Charter is on
 *** Publico Text
 ** monospace (for code)
 *** Go Mono
-[[https://blog.golang.org/go-fonts][Go Mono]] is part of a family of fonts from the Golang team. Unlike any other monospaced
+[[https://blog.golang.org/go-fonts][Go Mono]] is part of a family of fonts from the Golang team. Unlike any other monospaced fonts I have seen, Go Mono kind of looks like a serif font. I really think serif fonts are ideal for readability.
 *** Fira Mono
+Beautiful monospaced font from Mozilla.
 *** Operator Mono
 The Lamborghini of programming fonts. This is, as of the time of writing, [[https://www.typography.com/fonts/operator/styles/][the most expensive programming fonts]]. It does look good.
 *** IBM Plex Mono
-*** Menlo
 ** sans serif
 *** Adelle Sans
 *** San Francisco
