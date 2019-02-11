@@ -3,9 +3,7 @@ layout: page
 title: About
 ---
 
-This is my personal website/blog[fn:good_old_days]. I write articles and tutorials about computer programming mostly, but also a lot of random good thoughts I want to get down.
-
-[fn:good_old_days] Just like the Good Old Days™ of Geocities pages.
+Welcome to my personal website/blog. I write tutorials about computer programming mostly, but also a lot of random good thoughts I want to get down in essay format. All tutorials and essays are work-in-progress, evolving over time.
 
 # Goals
 

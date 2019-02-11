@@ -7,10 +7,11 @@ permalink:        /:categories/:slug
 
 # Setup
 title:            Zelly Snyder
-tagline:          'programming'
-description:      'programming, software reviews, finance, health'
+tagline:          'programming tutorials & essays'
+description:      'essays & tutorials on programming, investing, health'
 url:              https://blog.zellysnyder.com
 baseurl:          /
+year_created: 2014
 
 author:
   name:           'Zelly Snyder'
