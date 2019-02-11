@@ -143,19 +143,19 @@ int main(int argc, char* argv[])
 * Chromium / Google Chrome
 ** Recommended chrome://flags
 - improve aesthetics
-  - [[chrome://flags/#lcd-text-aa]]
-  - [[chrome://flags/#smooth-scrolling]]
-  - [[chrome://flags/#enable-font-cache-scaling]]
+  - chrome://flags/#lcd-text-aa
+  - chrome://flags/#smooth-scrolling
+  - chrome://flags/#enable-font-cache-scaling
 - add utility
-  - [[chrome://flags/#show-saved-copy]]
-  - [[chrome://flags/#save-page-as-mhtml]]
-  - [[chrome://flags/#enable-scroll-anchor-serialization]]
+  - chrome://flags/#show-saved-copy
+  - chrome://flags/#save-page-as-mhtml
+  - chrome://flags/#enable-scroll-anchor-serialization
 - improve security
-  - [[chrome://flags/#pdf-isolation]]
+  - chrome://flags/#pdf-isolation
 - use the latest and greatest features
-  - [[chrome://flags/#enable-future-v8-vm-features]]
-  - [[chrome://flags/#enable-javascript-harmony]]
-  - [[chrome://flags/#upcoming-ui-features]]
+  - chrome://flags/#enable-future-v8-vm-features
+  - chrome://flags/#enable-javascript-harmony
+  - chrome://flags/#upcoming-ui-features
 ** How to use the KDE file picker instead of the default GTK file picker
 The default file picker is the ugly GTK file picker, which can’t show thumbnails for images. The KDE file picker, kdialog, is much better; it has thumbnails and sorting abilities. Chrom{e, ium} won’t use kdialog unless you run it like this:
 

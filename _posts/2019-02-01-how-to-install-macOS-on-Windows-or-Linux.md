@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to install Apple macOS on Windows or Linux in a virtual machine
+categories: [software]
 ---
 
 I can only guarantee this working as of the time that this was posted. It's a complete hack, but it works. I also was able to do the same thing on GNU/Linux (Ubuntu 18.04) with the exact same method.

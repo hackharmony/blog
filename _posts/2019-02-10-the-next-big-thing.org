@@ -1,0 +1,69 @@
+---
+layout: post
+title: All Investment Strategies Mean Revert
+subtitle: Or how to identify the Next Big Thing
+---
+
+* Passive Get Rich Quick schemes
+This is a reflection on patterns in Get Rich Quick schemes that actually worked. I’m fascinated by passive investments that made people extremely rich just by assuming risk with extraordinarily good timing and foresight.
+
+You hear a lot about the very smart people who invented or pioneered things (e.g., Edison, Ford, Gates, Jobs, Zuckerberg), but you don’t hear much fanfare about the (arguably smarter) people who invested in them and made fortunes [without doing all the hard work](https://en.wikipedia.org/wiki/Rent-seeking). I guess this attitude is a manifestation of society’s, perhaps rightful, bias toward encouraging creation and labor over idle rich-getting-richer wealth growth.
+
+But I think the desire to Get Rich Quick is so universal and romanticized that those who say they don’t care about them are only pretending. Gambling has been around since the dawn of human civilization (I could imagine hunter-gatherers also gambled for resources in their tribes). The Get Rich Quick impulse is the essence of risk-taking, fundamental to the human experience. Gambling feels good because of its evolutionary advantage: We are all invariably descendants of people who took massive risks and happened to succeed. Without getting too philosophical, I would argue that the human impulse to Get Rich Quick is the #1 reason communism is a failure.
+
+Don’t tell me getting rich slowly is more guaranteed---I know. But don’t tell me this is not interesting.
+* Lifecycle of investments
+** The cycle of all successful investment strategies
+1. *Genesis*: Someone discovers or invents something big, potentially paradigm-shifting or just a Better Mousetrap. This is the new “Investment Vehicle”. Think personal computers in the early 1990s.
+2. *Smart Money*: Early adopters get in (the Smart Money phase). VCs, institutional investors, or just smart individuals start throwing money at this, seeing the potential.
+3. *Proof of Concept*: The concept either works or doesn’t. (If it doesn’t, it never makes it past this point, the early adopters lose their investment, and we never hear about the concept since it failed.)
+4. *Dumb Money*: Eventually, the masses see the potential too, and crowd in the speculative investment. Consequently, the price of entry into the investment soars.
+5. *Critical Mass*: By the time the Investment Vehicle starts producing revenue, the returns paid out to Dumb Money amounts to little more than---or possibly significantly less than---the returns of other mature investment vehicles, whereas Smart Money creates generational fortunes. (Alternate scenario: The Investment Vehicle fails to produce revenue/returns and wipes out Dumb Money, possibly Smart Money too.)
+6. *Reversion to Mean*: The Investment Vehicle becomes “commoditized”. Corporations or governments take it over. It produces returns equivalent to any old traditional investment (such as, say, the S&P 500 index), because over time it becomes a traditional investment by definition.
+
+Sound familiar? This is the story of every once Big Thing that landed on economies ever since civilized economies were a thing.
+** Examples
+- Flipping houses? Dead; $100+ Billion market cap REITs got into it too and took the opportunities that once allowed individuals to get rich.
+- Trading stocks, Forex, or derivative securities? Dead. Hedge funds and investment banks employ Ph.D. quants to design proprietary algorithms to extract money from the market. High frequency trading algorithms can execute tens of thousands of trades per second, whereas an individual human can barely move their mouse over the Sell button in one second. All short-term trading opportunities are taken by these machines. Investment bank traders have taken an [80% pay cut](https://youtu.be/sn1GYqfijvs?t=417) ever since high frequency trading rolled out. The pros can’t beat the machines---so the average Joe retail trader stands no chance. What can ordinary retail traders do to invest in markets? Basically just passive investment in major indices, or long term bets on assets based on long-term fundamentals. So not much better than pension fund.
+- Bitcoin/Ethereum/cryptocurrencies? Dead. Everyone and their grandma in the United States has a [Coinbase](https://en.wikipedia.org/wiki/Coinbase) account with funds. It was a phenomenal investment for the Smart Money who got in early. (Bitcoin may actually be the biggest ROI-time (return on investment with time considered) in human history. Some people paid on the order of $0.001 for what turned into $10_000.00 just seven years later---10_000_000x gains in 7 yrs.)
+- Investing in Amazon, Uber, et al.? Dead. Obviously. These former Next Big Things are now just another item on a pension fund, right alongside Coca-Cola and AT&T.
+- Buying and selling cars? Dead. Some decades ago, it was possible to make good money by taking advantage of people who didn’t know how much cars were worth. The internet killed this. Everyone uses an app to sell their car and knows exactly how much it is worth. (N.B. flipping cars is not necessarily a passive investment, but it is worth mentioning under the category of easy money sources subsumed by mass adoption.)
+
+When I say “Dead”, I don’t mean that you cannot make money by investing in them. On the contrary, thanks to compounding returns, over several decades it’s possible to turn $10k into $1 Million. I mean that they are no longer Next Big Things that have the potential to give truly crazy returns. Not interesting.
+** Reversion to the S&P 500
+Every investment strategy that has anomalous high rewards quickly reverts to those of the S&P 500 once enough people know about it.
+
+Like most economic phenomena, supply and demand are at play. An investment that would be good in the future, but not the present, possesses a non-ideal economic state where the cost of entry into the investment is lower than the expected benefit to its participants (the long-term average return). There are fewer participants on the demand side (investors) in the present, because of the low/nonexistent returns in the present, so the cost of entry must be lower. Obviously no one knows what the future holds. When the future is particularly uncertain (as with some new speculative investment like Ford’s Model T), nothing about the future of the investment can be priced in, i.e., baked into the price already. The sellers of the asset---e.g., Bill Gates selling equity in early Microsoft---are taking a long-term loss in exchange for short-term gain; in other words, early investors are profiting from a discrepancy in forecasting of the future[fn:arbitraging_time]. This is all an overly pedantic way to say that early investors are speculating on an asset. Bear with me.
+
+[fn:arbitraging_time] You could say early investors or Smart Money /arbitrage time/, but honestly that sounds cringey.
+
+
+Once the speculative asset proves itself promising to the broader market, the future forecast becomes less speculative; the demand side naturally rises. The cost of entry increases. Wealth is created. As the asset continues to perform up to investor predictions, it will continue to attract new investors, higher and higher demand. When does it peak and demand slow down? When the performance of the investment achieves parity with the next best alternative, which is often the S&P 500 index. (It’s very hard to beat the returns of the S&P 500, which is why relative performance of investments are [measured against it](https://en.wikipedia.org/wiki/Alpha_(finance)).) Then demand will cool off. Equilibrium will set in. It’s no longer a better-than-average investment. Why? *Because too people found out about it.*
+* The Next Big Thing
+The point of this isn’t necessarily to promote pessimism. Yes, all good investments eventually become not-good investments because too many people hear about them. That’s just an observable fact. The point of identifying this fact is to use it to discover good investments---quite the opposite of pessimism.
+
+The important thing to realize is popularity is inversely correlated to the quality of an investment. /No one gets rich by doing the same thing everyone else is doing/...proven as a straightforward consequence of the definition of “rich” being relative to average wealth. The [only hedge fund](https://en.wikipedia.org/wiki/Renaissance_Technologies#Medallion_Fund) that has consistently beat the market for decades is private and invite-only. Given the previous discussion, it’s clear why they did this. Suppose they made the fund public. Everyone would immediately crowd into it. They would have to expand their anomalously profitable positions to be able to invest all the new money. This would drive up the price of those positions, making them no longer profitable, eliminating the advantage they once had by taking advantage of superior knowledge about the value of assets that weren’t priced in. The low number of participants is one of the big reasons why the fund performs so well in the first place.
+
+So what do you look for? What’s the Next Big Thing?
+
+We already had...
+
+- Oil in 1860
+- Airplanes in 1905
+- Cars in the 1910
+- S&P 500 in 1957
+- PCs in 1990
+- World Wide Web in 1993
+- Smartphones in 2007
+- Bitcoin in 2010
+- ... in ???
+
+What’s next?
+
+(Hint: If you think it’s something everyone else would also guess, that ain’t it.)
+* Rent-seeking vs. Creating
+It’s fun to chase Get Rich Quick schemes, but it’s ultimately pointless and adds almost zero value to humanity. I can’t think of anything more self-centered than [https://en.wikipedia.org/wiki/Venture_capital](professionally seeking to profit from other people’s creations), but [https://en.wikipedia.org/wiki/Ayn_Rand](some philosophies) are used by [https://en.wikipedia.org/wiki/Peter_Thiel](some people) to argue this is not a bad thing. After all, without investors, a lot of very good ideas would never have gotten off the ground. Good ideas need resources to produce good for the world. Investment serves a purpose. Although on paper it’s a zero sum game---the recipient of a future-successful investment loses long term value to the investor---, there is no alternative in a non-perfect world where scarcity exists.
+
+Speaking from purely an idealistic perspective, it’s better to create, not just profit from other people’s creation. There are two categories of ways to generate value for yourself: rent-seeking or creating. Things like playing poker, trading stocks, gambling, suing people, imprisoning people for profit, etc. are all zero-sum games; your win is someone else’s loss. These activities only create value as a consequence of human-invented organized economies. They really are /games/---simulacra of tangible achievement. Profitably trading Forex currency pairs isn’t something that would feed you if you lived 100_000 years ago in nature[fn:naturalistic_fallacy]. It’s not real achievement. Getting really good at playing zero-sum games is guaranteed to be less personally fulfilling than equivalent effort expended on actual creation. Work. Build something. Add value to the world. It not only pays better, but it’s also a better use of your time.
+
+[fn:naturalistic_fallacy] Not to imply that everything which is unnatural is necessarily bad.
