@@ -216,8 +216,10 @@ Read SICP.
 *** LMDB
 * Fonts
 ** serif
+*** Baskerville
+Baskerville was found to be the [[https://opinionator.blogs.nytimes.com/2012/08/08/hear-all-ye-people-hearken-o-earth/][most trustworthy]] font on empirical testing.
 *** Charter
-Ideal for body text. I believe that serif fonts are more readable. Charter is one of the best serif fonts I have come across, and it’s available for free.
+Very beautiful font for body text. I believe that serif fonts are more readable. Charter is one of the best serif fonts I have come across, and it’s available for free.
 *** Publico Text
 ** monospace (for code)
 *** Go Mono
