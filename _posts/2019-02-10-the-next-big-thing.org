@@ -5,12 +5,12 @@ subtitle: Or how to identify the Next Big Thing
 ---
 
 #+OPTIONS: toc:t
-* Passive Get Rich Quick schemes
-This is a reflection on patterns in Get Rich Quick schemes that actually worked. I’m fascinated by passive investments that made people extremely rich just by assuming risk with extraordinarily good timing and foresight.
+* Get Rich Quick?
+You hear a lot about the very smart people who invented or pioneered things (e.g., Edison, Ford, Gates, Jobs, Zuckerberg), but you don’t hear much fanfare about the (arguably smarter) people who invested in them and made fortunes [[https://en.wikipedia.org/wiki/Rent-seeking][without doing all the hard work]].
 
-You hear a lot about the very smart people who invented or pioneered things (e.g., Edison, Ford, Gates, Jobs, Zuckerberg), but you don’t hear much fanfare about the (arguably smarter) people who invested in them and made fortunes [[https://en.wikipedia.org/wiki/Rent-seeking][without doing all the hard work]]. I guess this bias is a manifestation of society’s, perhaps rightful, preference for creation and labor over idle rich-getting-richer wealth growth.
+The tendency to gamble is really the distilled form of the desire to Get Rich Quick. Gambling has been around [[https://en.wikipedia.org/wiki/Gambling#History][since the dawn of human civilization.]] The impulse to take risks for large  gains is fundamental to the human experience.
 
-But I think the desire to Get Rich Quick is so universal and romanticized that those who say they don’t care about them are only pretending. The tendency to gamble is really the distilled form of the desire to Get Rich Quick. Gambling has been around [[https://en.wikipedia.org/wiki/Gambling#History][since the dawn of human civilization]] (I could imagine hunter-gatherers also gambled spare (and not spare) resources in their tribes). The Get Rich Quick impulse is the essence of risk-taking, fundamental to the human experience. Gambling feels good, gives us a reliable and potentially addiction-forming shot of dopamine. Why? Evolution incentivized the genes that promoted gambling: /We are all invariably descendants of people who took massive risks and happened to succeed/. Without getting too philosophical, I would argue that the human impulse to Get Rich Quick is the #1 reason communism is a failure.
+Gambling feels good, gives us a reliable and addiction-forming shot of dopamine. Why? Evolution incentivized the genes that promoted gambling: /We are all invariably descendants of people who took massive risks and happened to succeed/. The Paleolithic landscape offered many no doubt chances to win big for taking big risks; the winners outbred those who didn’t take risks. Without getting too philosophical, I would argue that the human impulse to Get Rich Quick is the #1 reason communism is a failure.
 
 Don’t tell me getting rich slowly is more guaranteed---I know. But don’t tell me this is not interesting.
 * Lifecycle of investments

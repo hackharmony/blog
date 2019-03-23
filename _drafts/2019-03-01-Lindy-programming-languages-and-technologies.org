@@ -1,0 +1,87 @@
+---
+layout: post
+title: Using the Lindy Effect to Choose Tech to Adopt
+---
+
+* Executive Summary
+- The Lindy Effect predicts that tech that that has already survived a long time will continue to survive into the future.
+- Use old tools to develop new things. Study new ideas, not new tools.
+- People who experiment with new tools are suckers who assume all the labor and risk for the benefit of late adopters.
+- Programming languages like C and Java
+* What is the Lindy Effect?
+/What has survived a long time so far will probably last a long time in the future also/.
+
+At any random point in time, the statistically most likely estimate of the life expectancy of something is how long that thing has already survived.
+
+#+BEGIN_QUOTE
+The [[https://en.wikipedia.org/wiki/Lindy_effect][Lindy effect]] is a concept that the future life expectancy of some non-perishable things like a technology or an idea is proportional to their current age, so that every additional period of survival implies a longer remaining life expectancy. Where the Lindy effect applies, mortality rate decreases with time.
+#+END_QUOTE
+
+The Lindy Effect exposes the simple fact that things that have survived a long time have survived for a good reason. Survival isn’t completely random. There are reasons a technology would last a long time. Time proves things in an evolutionary manner---bugs get discovered and fixed and unviable ideas get shot down by reality. Indeed, if our measurement is survival, then the most accurate metric to predict it would be (past) survivability itself.
+* The Lindy Criterion: Should I learn X?
+If you are considering learning a programming language, IDE, or development tool in your spare time---ask yourself, /Is this technology old enough to bother with it?/
+
+I understand this sounds like sacrilege in a world obsessed with innovation and being on the cutting edge. I’m not against innovation, though. I’m all for innovation in /what you create/ with your tools despite using the oldest tools possible to do the job. Deep learning, for example, is a relatively new innovation that you should probably be taking advantage of. You should use Python and C++---two very old programming languages---to write deep learning code.
+
+Old Tools, New Ideas.
+
+Internalizing this requires an inversion of your normal instincts as a software developer or curious student of technology. We crave novelty. We always suspect everything’s broken, and the Promised Land [[http://wiki.c2.com/?GoldenHammer][is just around the corner]]. You have to realize that this is a misguided emotion. Instead of learning some new hip new tech, try---I dunno---getting better at writing Java. Boring? Absolutely. Likely to continue to be useful? Absolutely.
+
+What succeeds in the real world is often much more boring than what we think will be great or will change the world. Some of the biggest software companies at the time of this writing are essentially glorified PHP guestbooks from the late 1990s.
+
+#+CAPTION: Tell me this isn’t basically Facebook
+[[https://i.imgur.com/w9WcLH8.png]]
+* Don’t DIY battle testing---let other people do it
+You get points for being an early adopter of /tech/. The early adopters of the personal computer concept made Microsoft. The early adopters of the Internet created social networks and search engines which generated trillions of wealth. The early adopters of deep learning will create machines that cause the next Industrial Revolution. Late adopters to these things find themselves in a heavily competitive market.
+
+You don’t get points for being the early adopter of tech /tools/. I’m generally talking about modern open source development tools, databases, editors, operating systems, hardware designs, etc.
+
+You have to deal with all the bugs in the early editions of the software. Odds are you would end up very active in the community around it, contributing code for free, hanging out in the developers’ IRC too much. If you use the tool heavily, you definitely will have read the source at some point (more wasted time completely unrelated to your actual work). You do all this to no personal benefit[fn:NoPersonalBenefit] and at the risk of having wasted all that time if/when the project fades away and never takes off.
+
+Suppose the project does take off. The early adopters are already experts before it reaches critical mass; good for them. But how hard exactly is it to learn a new programming language, database, operating system, etc. and become [[https://en.wikipedia.org/wiki/Pareto_principle][80%]] as much of an expert at it? I, as a late adopter of your tech, could come along 6 years later after you did all the work of ironing out the early bugs and enjoy all the benefits of your finished product without paying you anything.
+
+Late adopters to already successful tools are arbitraging the labor of the early adopters who did it for free.
+
+Don’t risk your time. Time is very important, and Working Mode or Paying Attention Time is especially scarce---don’t waste it on stuff other people will do for you.
+
+[fn:NoPersonalBenefit] Exceptions:
+1. You are selling the tool as a proprietary, closed source product; then obviously you profit once it’s completed.
+2. You somehow get more marginal utility from the /per se/ advantages of the tool itself than the marginal cost of your time spent working on improving the tool. This is probably extremely rare.
+3. You are writing books on using the tool, providing consulting services for it, you legitimately need the exposure or practice, or doing speaking engagements about your expertise.
+4. The tool is an in-house product to solve an in-house problem. (This shouldn’t even be mentioned because it’s outside the scope of a tech tool that has the potential to reach critical mass.)
+* Lindy software technologies
+** programming languages
+- C
+- LISP
+- FORTRAN
+- Java[fn:CeeSharp]
+
+#+BEGIN_QUOTE
+“We don’t know what language engineers will be coding in in the year 2100. However, we do know that it will be called FORTRAN.”
+--- C.A.R. Hoare
+#+END_QUOTE
+
+[fn:CeeSharp] C# too, to a slightly lesser extent since I believe the [[https://openjdk.java.net/][open nature of Java]] contributes to a superior life expectancy to .NET, which is tied to the business decisions of one company.
+** operating systems
+UNIX has been around since 1970. Although really the only widely used operating system that can officially bear the name UNIX is [Free, Open]BSD, for all intents and purposes, Linux is UNIX. Linux is the most widely deployed OS in the world. Linux is the de facto standard.
+
+Despite numerous promising alternatives---some even superior e.g., Windows, macOS, BeOS/Haiku, Fucshia---we are still using directories called ~/usr~ and ~/home~. 
+** editors / IDEs
+1. vi
+2. Emacs
+3. vim
+4. Visual Studio
+5. IntelliJ
+6. Eclipse
+
+In that order.
+
+In 10 years, no one will remember Sublime Text 2, Atom, VS Code, and friends.
+** what fails the Lindy Criterion?
+- Elixir
+- Crystal
+- Nim
+- Rust
+- JavaScript
+- Swift
+** what about things that might become Lindy?

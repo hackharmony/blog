@@ -1,0 +1,8 @@
+---
+layout: post
+title: Meditation Driven Programming
+subtitle: How paying attention as a concerted effort can make you write better code
+---
+
+* Pay attention!
+* Meditation Driven Programming™
