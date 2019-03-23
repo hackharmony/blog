@@ -182,6 +182,7 @@ Recommended: ~$ xset r rate 210 170~
 
 </fontconfig>
 #+END_SRC
+3. ~$ sudo ln -s /etc/fonts/conf.avail/75-noto-color-emoji.conf /etc/fonts/conf.d/~
 * macOS
 ** input devices
 *** keyboard
