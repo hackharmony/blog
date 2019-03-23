@@ -61,8 +61,10 @@ Recommended: ~$ xset r rate 210 170~
 ** Color Emojis in Google Chrome / Chromium
 1. [[https://www.google.com/get/noto/help/install/][Install Noto Color Emoji]] fonts.
 2. Create file as root: ~/etc/fonts/conf.avail/75-noto-color-emoji.conf~
+3. ~$ sudo ln -s /etc/fonts/conf.avail/75-noto-color-emoji.conf /etc/fonts/conf.d/~
 
-#+BEGIN_SRC: xml
+~/etc/fonts/conf.avail/75-noto-color-emoji.conf~:
+#+BEGIN_SRC xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 
@@ -182,7 +184,6 @@ Recommended: ~$ xset r rate 210 170~
 
 </fontconfig>
 #+END_SRC
-3. ~$ sudo ln -s /etc/fonts/conf.avail/75-noto-color-emoji.conf /etc/fonts/conf.d/~
 * macOS
 ** input devices
 *** keyboard
