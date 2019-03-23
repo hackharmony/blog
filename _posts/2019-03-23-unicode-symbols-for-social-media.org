@@ -8,7 +8,7 @@ This is a list of Unicode symbols / code points that are often used on social me
 
 The symbols themselves are listed alongside their hexademical Unicode code points. For often-used symbols, it’s useful to memorize the numerical code points so that you can input them without having to search engine the symbol (or refer to a webpage like this, which you should bookmark!).
 
-On *Microsoft Windows, macOS, and X11 (GNU/Linux or *BSD)*, [[https://en.wikipedia.org/wiki/Unicode_input#Hexadecimal_input][inputting Unicode symbols by their code points]] is easy with a native keyboard shortcut.
+On *Microsoft Windows, macOS, and X11 (GNU/Linux or *BSD)*, [[https://en.wikipedia.org/wiki/Unicode_input#Hexadecimal_input][inputting Unicode symbols by their code points]] is easy with support for native keyboard shortcuts.
 
 In *Emacs*, ~M-x insert-char~.
 
@@ -32,6 +32,7 @@ On *Android or iOS*, as of the time of writing, there is no native equivalent to
 - ❊ – #0x274a – eight teardrop-spoked propeller asterisk
 * Punctuation
 - — – #0x2014 – em dash
+- – – #0x2013 – en dash
 - ━ – #0x2501 – box drawings heavy horizontal
 - ❝ – #0x275d – heavy double turned comma quotation mark ornament
 - ❞ – #0x275e – heavy double comma quotation mark ornament
@@ -87,7 +88,11 @@ On *Android or iOS*, as of the time of writing, there is no native equivalent to
 * Extra: Python to generate these lines
 /You think I manually wrote all this?/
 
-#+BEGIN_SRC: python
+#+BEGIN_SRC python
+#!/usr/bin/env python3
+
+import unicodedata
+
 def unicode_description(src):
      n = ord(src)
      h = hex(n)
