@@ -1,6 +1,6 @@
 ---
 layout: page
-title: x86 Assembly Tutorial
+title: x86 Assembly for Reverse Engineering
 subtitle: Learn how to use assembly to debug your programs and reverse engineer other people’s programs
 ---
 
@@ -37,11 +37,9 @@ A programmer who knows how to use assembly has the power to take any mysterious,
 ** Embedded systems
 Another trend of computing is a movement away from bulky personal computers and adoption of small devices that do a few things really well. People are already getting rid of their laptops and just using their smartphones. The smaller the target, the more low level the code running on it has to be.
 ** It will never be a wasted investment of time
-Learning the latest hipster language that compiles to JavaScript? Might be a good use of your time if it takes off, but there’s a good chance it will end up like 99% of its peers and die off in the dustbin of history.
-
 In your lifetime, I can guarantee that CPUs/GPUs will be basically the same. The older and more culturally ingrained a technology is, the longer it lasts. I wouldn’t be surprised if we’re still using the [[https://en.wikipedia.org/wiki/X86_calling_conventions#cdecl][C calling convention]] in year 2100.
 * Reference
-The only books you need for Assembly are the [[https://software.intel.com/en-us/articles/intel-sdm][official Intel manuals]].
+The only book you need for Assembly are the [[https://software.intel.com/en-us/articles/intel-sdm][official Intel software developer manuals]].
 * Choosing an assembler
 * Hello World
 * Syntax
@@ -67,8 +65,17 @@ AT&T syntax: =mov 0x01 a= would copy the integer value of 1 into ~a~.
 * Memory
 * Registers
 * Functions
+The most important thing to know in reading disassembly is how to parse function calls.
+
+CALL is the mnemonic that takes a 32-bit address of a function to call. CALL actually executes more than one instruction.
+
+Every function call in ASM opens like this...
+
+RET pops the stack pointer and returns the instruction pointer to the address of the caller.
 * Control flow
-* Arithmetic
 * Using objdump
-* Using gdb (GNU Debugger)
+* Using debuggers
+** lldb
+** gdb
+** WinDbg
 * Reverse engineering
