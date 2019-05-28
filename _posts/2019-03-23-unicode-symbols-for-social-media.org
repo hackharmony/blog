@@ -36,6 +36,7 @@ On *Android or iOS*, as of the time of writing, there is no native equivalent to
 - ━ – #0x2501 – box drawings heavy horizontal
 - ❝ – #0x275d – heavy double turned comma quotation mark ornament
 - ❞ – #0x275e – heavy double comma quotation mark ornament
+- … – #0x2026 – horizontal ellipsis
 - ® – #0xae – registered sign
 - © – #0xa9 – copyright sign
 - ™ – #0x2122 – trade mark sign
