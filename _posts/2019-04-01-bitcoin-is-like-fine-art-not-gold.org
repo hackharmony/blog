@@ -1,0 +1,91 @@
+---
+layout: post
+title: Bitcoin as an Expensive Piece of Art
+subtitle: An argument that Bitcoin is basically the first globally interactive piece of performance art, and that’s why it has unlimited value as in a da Vinci painting but not as in gold.
+categories: [philosophy]
+---
+
+* Summary
+- Bitcoin belongs in the same category as fine art.
+- People store wealth in things that are both beautiful and rare.
+- Bitcoin is a story and piece of history---not a technology, currency, a payment processing platform, or a decentralized protocol.
+- Other cryptocurrencies lack Bitcoin’s intrinsic value and cannot justify their value.
+* What gives Bitcoin its value?
+This is what everyone new to cryptocurrency immediately asks. The standard answers are:
+
+- Bitcoin is a worldwide instantaneous payment mechanism.[fn:paymentsSystem]
+- Bitcoin allows fungible payments across borders without censorship.[fn:permissionless]
+- Bitcoin is a medium of exchange that avoids government censorship; it’s useful for capital flight, black market transactions, and tax evasion.[fn:nationStateEnemy]
+- Bitcoin is a store of value.
+
+The first answers are either downright untrue or not unique to Bitcoin. Telling me the superior aspects of Bitcoin if it were used as a currency assumes it should be a currency in the first place. In fact, saying that the raw technological features of Bitcoin are what gives it value is really an argument that it doesn’t have any value. These technological features that supposedly give it value can be (and have been) copied ad infinitum since it’s just software. (Unlike Microsoft Windows, which is valuable as software, Bitcoin is completely open source and freely licensed, so it doesn’t even need to be reverse engineered to be copied.) If those software features impart intrinsic value, then I should be able to make a perfect copy of all of Bitcoin’s features and steal all of Bitcoin’s value, but that’s obviously not what happens.
+
+Most of these common answers end up begging the question by assuming Bitcoin has value at all. The most plausible answer is the last one listed—“it’s a store of value”—because it unashamedly implies this tautology. No one ever needed to question the value of gold as being worth something. It just was. You didn’t have to think about it.
+
+But since we are questioning it, and it’s obviously far more common for people to ask why Bitcoin has value than why gold has value, gold and Bitcoin aren’t exactly analogous. At the surface, though, there is one big similarity: perception. People who accept gold as valuable—>99% of the world—accept gold as valuable without questioning it. People who have a significant amount of their net worth in Bitcoin accept Bitcoin as valuable without questioning it. You can say there are varying degrees to which something is a store of value, with gold being a somewhat absolute store of value and Bitcoin, collectible sneakers, and Picasso paintings lying somewhere to the left of gold.
+
+What do other pure (non-fiat non-paper currency) stores of value have in common?
+
+- Gold
+- Silver/platinum/other precious metals
+- Pieces of art like Picassos
+- Collectible sneakers
+
+They all are /scarce/ and /aesthetic/. Being scarce is easy. It’s the aesthetic part that’s the bottleneck. In the eyes of the believers (who are necessarily more than 1 person), these things are beautiful.
+
+If you have ever held pure 24-karat gold bullion in your hands, then you know the feeling. You know the original humans who found gold in the ground felt the exact same thing. Gold’s aesthetics can’t be replicated (and if it were, upon verification of the fraudulent gold (which is easy), it would immediately lose all its aesthetics). There is no immediately rational reason why gold is so beautiful—without bringing in some reductionist explanation of the neuroscience—just like why some music is beautiful. The inability for people to explain technically why gold is valuable is the same as the inability to explain in technical, man-made terms why gold is beautiful. It just is. To illustrate the point about aesthetics creating value, I would argue that in a hypothetical world where you needed a rare magic rock (in fixed supply) to be able to listen to your favorite song, those rocks would be used as currency and to store wealth.
+
+Note that these stores of value fall somewhere along a sliding scale of /store-of-valueness/. Lots of people think it’s stupid that a Pollock painting could be worth over $200 million.
+
+/It’s just a bunch of splashes of paint on a canvas. Who would pay money for that?/
+
+/It’s just a string of numbers on a computer. Who would pay money for that?/
+
+The owner of a DaVinci/Picasso/Pollock painting doesn’t just have a beautiful piece of art. They have a part of history. The older the painting, the longer the artist having been dead, the higher the price of the painting. The same is true of Bitcoin. It represents a part of history. (And it helps that the artist, Satoshi, is for all practical purposes dead.) Regardless of whether it was intended to be as much, Bitcoin was an expression of widespread frustration with the current economic and political system. The world is increasingly dominated by huge central powers with huge militaries and police states. In complete defiance to the powers that be, some people out of nowhere decide to declare cryptographic digital signatures—“lines of code on a computer”—as money instead. For that to happen, the way the world was organized would have to completely invert. Governments would lose a significant amount of control over individuals. Commerce would be nearly impossible to censor across borders. Taxation would become very difficult. It would be an internetization of human activity the way e-mail was an internetization of human communication. An upgrade of economics from legacy to the world wide web. Bitcoin is a big dream. It’s not often in history that individuals rise up to assert their autonomy in the face of huge systems of control, and those events usually end up with borders being redrawn. Like a good painting, Bitcoin tells a story that can fill entire volumes on bookshelves. The social phenomenon it created is very good proof of this popular imagination in practice.
+
+Note that for Bitcoin to have value as art, Bitcoin doesn’t have to cause social change. It’s enough that it has this story behind it.
+
+Unlike fine art, Bitcoin is the first form of “art” that anyone can interact with. It can be rapidly transferred in a way fine art cannot be. Bitcoin was designed to be speculated on.
+
+* Main difference between Bitcoin and altcoins
+In every discussion comparing Bitcoin to Ethereum, Monero, BCash, or any of its “competitors,” there is always this unspoken agreement that even the most die-hard spokespersons of altcoins would admit is true: If Bitcoin were to disappear tomorrow, every other altcoin would have disappeared first. There is no real competition. No one seriously believes that Bitcoin is ever going to be dethroned, even developers of the competing coins. But a lot of altcoins are technologically superior to Bitcoin. Bitcoin is over a decade old technology. Imagine people still walking around with original iPhones from 2007.
+
+I think this is a clear indication that Bitcoin is not about technology.
+
+It’s also, by extension, not about payment processing, commerce, decentralization, or any of the commonly repeated pitches. Why would you use a worse technology to do X?...unless X was never your goal anyway. Indeed, no one uses Bitcoin for buying[fn:hodlers] goods and services. (Yes, some people do; but they never denominate prices in Bitcoin, and it’s almost more common for people to pay in gold coins.) Some argue that Bitcoin remains dominant because it has the most critical mass and the most users, but that’s begging the question. AltaVista and MySpace both came first but still died because those were battles over who had the better tech. Crypto isn’t about tech. Truth is, Bitcoin is dominant because it is the only coin with the story. Altcoins are a bet that crypto is about the tech—the utility as a currency, transactions per second, anonymity, privacy, or utility to enterprise—which I think is a fundamentally wrong take on what cryptocurrency actually is.
+
+Bitcoin is like an urban legend. It was created by an anonymous guy/girl/entity who, despite having many billions (maybe soon trillions) worth of Bitcoin, chose to remain anonymous. Every entry-level description of Bitcoin mentions Satoshi. It’s also something that people being introduced to Bitcoin immediately ask: Who created it? It’s a subject of intrigue that feeds this urban legend type of mystique and wild imagination. It’s almost pseudo-religious, where this messianic savior gave us the key to our freedom then left. I don’t know if Satoshi Nakamoto realized this or did so only as an accident. Bitcoin had to be decentralized for this story to work. Obviously if Bitcoin were a company, the grand vision of Bitcoin and hence its aesthetics wouldn’t exist. (In other words, Bitcoin is only decentralized as a consequence of the reason for its value, whereas most Bitcoiners believe the opposite.) I think the anonymity of Satoshi is so important to Bitcoin’s success that if we had a picture of Satoshi in 2011, the price of Bitcoin right now would be less than $1.
+
+The beauty of Bitcoin is that it’s a movement. Altcoin projects, on the other hand, all feel like products instead. Very scammy products. Things like ICOs, STOs, or centralized stablecoins have the same energy as old school infomercials at 3 am on television trying to sell you timeshares. You know what the creator looks like. They have an organization with a CEO, CTO, CFO, and a team consisting of the same people who used to make money with Viagra spam emails and domain squatting before crypto. Their strategy is to milk what they can from their tangential association with Bitcoin. For the short-term, it’s not a bad idea for them since a lot of them get rich. But it’s still not Bitcoin. If Bitcoin is the Mona Lisa, altcoins are the kebab vendors outside the Louvre.
+* Bitcoin can both be a pseudo-art project and the next world reserve currency
+#+CAPTION: Smarter than humans? YouTube’s machine intelligence classifies Bitcoin as “collectibles” as in art collecting or Pokemon collecting.
+[[/public/img/youtube_classifies_bitcoin_as_collectibles.png]]
+This hypothesis may be taken as demeaning to Bitcoin evangelists who are convinced in their reasons for liking Bitcoin. After all, I’m making the outrageous statement that /Bitcoin is not a currency/ when currency was the whole point of Satoshi’s code.  The nuance is that although Bitcoin isn’t a currency in itself as it is advertised, it can be the basis of a currency. Bitcoin would be held in reserve to back the value of “paper” notes. That Bitcoin could be transferred extremely easily would be almost besides the point, because that’s not why it would be held as reserve.
+
+Bitcoin being art makes World Reserve Currency status actually sound plausible.
+
+Bitcoin-as-art means it will always be worth something. There’s nothing about this hypothesis that would prevent Bitcoin from succeeding in becoming a decentralized medium of exchange. It just means that it doesn’t /have to/ in order to be valuable.[fn:facebookCoin]
+
+Suppose an objective observer, like an alien landing to our planet, had to answer What is Bitcoin?  in terms of asset classes that already exist. My thesis is that the most obvious answer is that it’s like fine art or collectible sneakers (but not gold). I don’t think there’s anything wrong with that. Of all the things that humans ascribe inherent value to, surely Bitcoin is the most deserving. I can hang up a beautiful painting and stare at it, but I can do a lot more with Bitcoin. If we must irrationally ascribe value to some thing for our economy to work, why not let it be Bitcoin? Bitcoin is a lot more sophisticated than its antecedents. It seems like the next logical and healthy step for us to take as a technological species.
+
+[fn:paymentsSystem] Bitcoin isn’t a very good payments system—it’s more expensive and inherently slower than nearly every other payment system. Centralized payment solutions will always be intrinsically cheaper because a transaction requires only O(1) databases need to be updated compared to O(n) Bitcoin nodes, not to mention the expenditures of proof-of-work.
+[fn:permissionless]  Bitcoin does allow you to send Bitcoin without asking anyone’s permission. But this is just a software feature. I can send MP4 videos of chimpanzees over HTTPS to anyone without the permission of a bank/government, but this doesn’t make videos of chimpanzees a currency. It’s completely irrelevant to the philosophical question of why Bitcoin should have value. Also, Monero, Zcash, and Grin all support completely fungible transactions on-chain in a way that Bitcoin does not. Someone who uses censorship-resistance as the main argument for Bitcoin should sell it all for Monero instead to be logically consistent.
+[fn:nationStateEnemy]  If a nation-state is your adversary, then Bitcoin is the worst currency to use. Every coffee you buy with Bitcoin is permanently logged on its public blockchain, and barista knows your net worth. It’s all public. You can scramble addresses all you want; the IRS or DEA has enough resources to do chain analysis and find you. Bitcoin is probably good for obfuscating petty crime, since forensic blockchain analysis is currently more difficult for local police departments compared to subpoenaing PayPal.
+[fn:hodlers] People don’t want to spend their Bitcoin. They come up with intricate schemes to hide it. Some users hide paper or hardware wallets in safety deposit boxes with precautions against flooding and fire (gee, almost like a piece of fine art).
+[fn:facebookCoin] One great thing about this hypothesis is that Bitcoin’s future is insulated from the threat of government digital currencies or corporate digital currencies. I could easily see a future where everyone uses the IMF’s stablecoin to buy food but occasionally spends spare change buying Bitcoin at $1,000,000 IMF/BTC to hedge against inflation.
+* Important conclusions if this hypothesis is true:
+- Bitcoin is the only cryptocurrency with any real value.
+- Every altcoin is unnecessary inflation on top of Bitcoin, parasitizing the success of Bitcoin.[fn:parasites]
+- Bitcoin is valuable fundamentally because of its story; its software features (such as decentralization) only facilitate that story but don’t create it.
+- Altcoin projects that seek to expand decentralization, payment processing, fungibility, or utility in commerce fail to capitalize the true source of Bitcoin’s value.
+- Government- or corporation-sponsored cryptocurrencies aren’t a threat to Bitcoin.
+- Even if you agree with this hypothesis, keep pretending it’s a decentralized, trustless, borderless payment platform the same way we pretend the Mona Lisa by da Vinci is a picture of an enigmatic woman instead of just pigment on a canvas.
+
+[fn:parasites]  This isn’t to imply that altcoins will all go to zero. Precious metals other than gold remain valuable despite basically being inflation upon gold. Silver was used historically as a micropayment for gold. You would pay for a loaf of bread in silver, not gold, because you couldn’t physically divide gold into small enough pieces. This isn’t necessary today because we can print paper notes or create rows in a database that represent any quantity of gold. Yet silver is still worth a lot—more than it would be worth for its purely industrial applications. The same analogy is true of Bitcoin to altcoins. They will likely be around forever, despite being unnecessary, just as this weird inefficiency in the market.
+* What if this hypothesis is wrong?
+Bitcoin not being art means it’s a fiat currency. Every medium of exchange has been one because either:
+
+- It’s /scarce/ and /aesthetic/—i.e., it’s a true store of value.
+- It’s scarce and has value because someone with more weapons than you says it has value (e.g., the Roman Emperor Nero’s currency or the U.S. Dollar).
+
+If you are a Bitcoiner and offended by the idea that Bitcoin is just an art piece, then the only alternative is to hope that Bitcoin can be the latter. But how? Who’s going to force you to use Bitcoin? You better hope that Satoshi’s whitepaper and the phenomenon it created is the most beautiful piece of abstract art the world has ever seen.
