@@ -5,25 +5,31 @@ subtitle: A curated list of the best software, programming languages, or develop
 ---
 
 #+OPTIONS: toc:t h:8
-* Abstract
+* What is this?
 This is a curated collection of software that I recommend and brief reviews. It’s basically your ultimate guide to computing effectively. I have a bias toward software with free and open source licenses. Where I choose proprietary alternatives otherwise is always for very good reason.
 * Operating system
 Use the right tool for the job. It all really depends on what you are doing, so instead of recommending one OS over all others, I will review each of them based on my experience with them. I have used all major operating systems. The top 3 OSes (macOS, GNU/Linux, and Windows) are all part of my regular usage, and all have their uses.
 
-1. macOS
-2. GNU/Linux
-3. Windows 10
+1. GNU/Linux
+2. Windows 10
+3. macOS
 4. *BSD
+
+That said, macOS is trash. One very important job of an operating system is to interface with hardware. I can’t run it on >99% of software, only Apple’s approved machines. Therefore it’s a horrible OS.
+
+Linux won.
+
+It’s time for Apple and Microsoft to stop duplicating effort. There is no reason for humanity to duplicate effort on something as boring as a kernel. Gains from competition aren’t relevant in this field because everyone needs the kernel to work for actual business. Trillions of dollars depend on Linux working; it’s forever. It’s already on 90% of smartphones. Let’s get Windows and macOS to port their userspace to Linux.
 * Web browser
 ** Chromium (or Google Chrome)
 As much as I wanted to like Mozilla Firefox, I have stopped fighting the trend. Every website out there is developed to target WebKit browsers first. There is no competing with the massive resources and mindshare directed at Chromium development. This means more than just better superficial features—it means better security updates. Chrom{e, ium} has the best dev tools for web development.
 
-Prefer Chromium over Google Chrome. Why? It has slightly less spyware built in, and you are free to compile it yourself in the spirit of free software.
+Prefer Chromium (or Brave) over Google Chrome. Why? It has slightly less spyware built in, and you are free to compile it yourself in the spirit of free software.
 * Text editor / IDE
 ** editor
 Yes, it’s time for that childish argument.
 *** GNU Emacs
-I know it’s [[https://en.wikipedia.org/wiki/Imprinting_(psychology)#Baby_duck_syndrome][baby duck syndrome]], but I ♥ Emacs and don’t see myself going away from it as my daily driver.
+I know it’s [[https://en.wikipedia.org/wiki/Imprinting_(psychology)#Baby_duck_syndrome][baby duck syndrome]], but I +like+ can bear with it.
 
 Thanks to [[https://langserver.org][Language Server Protocol]] you can get feature parity with VS Code/Atom and other flavor-of-the-month editors. So I’m happy. (But that’s still quite long way from a real IDE like Visual Studio for C++.)
 
@@ -38,13 +44,15 @@ Cons:
 - The kernel code is very old. It’s very complicated, spaghetti-ish C code.
 - The Elisp interpreter is /sloooow/. I haven’t measured, but it may actually be slower than Ruby.
 - Graphical Emacs is very buggy compared to modern editors. Displaying text can take a long time. Opening a very large text file can hang your entire system.
-- Using Emacs will make you look very old.
+- Using Emacs will make you look very old and out-of-touch.
 
 I don’t recommend religiously using Emacs only. It’s just a tool, and a bad one for many tasks. The whole point of Emacs, in my opinion, is to save time. If you’re writing Java, C#, or mobile apps, you’re not saving time by using Emacs to do it, you’re wasting yours and everyone else you’re working with’s time. Also, believe it or not 🙃: You can run Emacs /and/ an IDE at the same time to work on the same project. Crazy stuff, I know.
 *** VS Code
 VS Code is the best of the next-generation crop of text editors built on Electron/node.js. It’s the killer for Sublime Text and all those proprietary text editors which never really needed to exist (especially as closed source and for-pay). I understand not everyone will want to use Emacs or Vim (and I definitely don’t blame them)---VS Code is a fine generalist editor. It fills a similar position that Emacs does (in spirit): It’s basically an IDE in terms of feature set but isn’t tied to a specific language, OS, or runtime environment. It’s also relatively easy to customize and write extensions for (cf. Atom, Sublime Text, and others), but still nothing as easy as writing Elisp.
 
 Microsoft continues to [[https://www.youtube.com/watch?v=Vhh_GeBPOhs][prioritize the experience of developers]], a solid business strategy that will lead them to prosperity for decades to come.
+
+All the new language plugins get tried in VS Code first. It’s definitely the future. If Microsoft gives up on it for some reason, then the community will take it over as a FOSS project.
 *** Vim
 Vim is what I originally started with. It’s great, but if that’s all you use, you’ll find yourself wanting more features than just a text editor.
 
@@ -54,10 +62,12 @@ Clearly a lot of thought went into vi keybindings. I have to admit they are high
 If you are doing any kind of development for Windows systems, you would be a fool to use anything but Visual Studio. (N.B., I’m not talking about /Visual Studio Code/.)
 
 Visual Studio is hands down the best C++ IDE ever.
-*** IntelliJ
+*** IntelliJ JetBrains
 Best IDE for Java.
-*** XCode
-*** Eclipse?
+
+PyCharm is the best IDE for Python.
+
+Use it.
 * Shell
 ** bash
 ** zsh
@@ -74,7 +84,6 @@ Shell scripts aren’t “real” languages. They don’t have utilites for abst
 There are some people who use IPython as their system shell and never touch bash. I think that’s a little extreme, but it’s certainly possible.
 * Programming languages
 /“Use the right tool for the job!,”/ you hear condescendingly from the mature people whenever you talk about favorite programming languages. But I think this view is dated in today’s world since there are several competing popular languages/environments for every domain of software development. Some of them have to be objectively bad, the metric being their amenability to producing good software. I don’t and can’t accept the idea that X language is /just as good/ as Y no more than I accept that PHP and Python are on the same level because they’re both Turing complete.
-** TODO For the pedantic: Languages vs. Runtimes
 ** How to judge programming languages
 You judge programming languages by judging the programs that have been developed using it. And the way you judge programs is by seeing the market response by the users of those programs.
 
@@ -86,24 +95,21 @@ Last on the list, I consider the /aesthetics/ of the language to be important. I
 ** Languages
 *** by use case
 **** large projects
-1. C++
-2. Java
-**** scripting
+1. Java
+2. C++
+3. Rust
+**** scripting (one-off)
 1. Ruby
 2. Python
-3. Lua
 **** science/stats/machine learning
 1. Python
 2. Mathematica
 3. C++
+4. R
 **** web services
-1. Golang
-2. Java
+1. Java
+2. Golang
 3. Ruby
-**** doing something new and revolutionary
-1. C++
-2. Common Lisp
-3. Rust
 *** Reviews
 **** C++
 The ultimate industrial powerhouse Swiss army knife of languages.
@@ -232,37 +238,6 @@ The Lamborghini of programming fonts. This is, as of the time of writing, [[http
 ** sans serif
 *** Adelle Sans
 *** San Francisco
-* Multimedia
-** editors
-*** audio
-*** video
-Adobe Premiere Pro
-*** photos
-Adobe Photoshop
-** players
-*** video
-mpv
-*** audio
-**** Windows
-foobar2000
-**** GNU/Linux
-Clementine (?)
-* Office
-** Word processor
-*** academic
-\( \LaTeX \)
-*** lightweight markup
-org-mode all the way. Markdown is trash.
-*** everything else
-Microsoft Word. Don’t fight the world by using LibreOffice, Pages, Google Drive, or whatever you think is acceptable.
-** Presentation
-Apple Keynote
-** Spreadsheet
-Microsoft Excel
-** Email client
-Mozilla Thunderbird
-** On LibreOffice
-LibreOffice is horribly bad. I guess it’s good that Linux users have /some/ native office clients. It gets the job done—barely. But unless you’re Richard Stallman, just boot into Windows and use Microsoft Office and save your time.
 * Cryptocurrency
 ** Bitcoin ($XBT)
 - First mover advantage
@@ -272,39 +247,4 @@ LibreOffice is horribly bad. I guess it’s good that Linux users have /some/ na
 ** Monero ($XMR)
 This is one of the best cryptocurrencies and probably the only one besides Bitcoin that will still be used in 20 years. Monero implements the ideal of cryptocurrency as an anonymous, fungible, censorship-resistant electronic cash.
 ** Ethereum ($ETH)
-[[https://blog.bitmex.com/ether-a-double-digit-shitcoin/][Scam]]. It’s based on this idealistic “world computer” meme that while interesting has no reason to involve currency at all except to be a cash grab. Smart contracts are a joke—I can much more easily implement “smart contracts” using fiat and traditional payment gateways than by using some decentralized mess.
-*** the JavaScript problem
-The idea of smart contracts is to have programs running on a P2P network that decide to spend a certain amount of Ethereum tokens. Problems:
-
-- Ethereum uses a JavaScript VM.
-- An anonymous person’s Turing complete code runs on anonymous people’s computers.
-- You can’t fix bugs in a smart contract once it’s deployed because it’s immutable in the blockchain.
-
-When someone tells you they want to manage everyone’s /money/ using /JavaScript/, you turn the other way and get out of there as fast as possible. Millions of dollars (of real money—USD) have been lost already to Ethereum bugs, and there will always be more in the future. All programs have bugs. I would have had more confidence in smart contracts had Ethereum used something like CoQ or Agda—formal proof verifying languages (don’t compile if the proof is wrong)—rather than their DSL sitting on top of JavaScript, an extremely fragile and type unsafe interpreter that probably is more likely to result in bugs than any other contemporary language runtime.
-*** the “smart contracts” problem
-We don’t /need/ Ethereum to create the utility of a smart contract. Ethereum advocates argue that it would be used to validate transactions in exchange for X without a third party. Suppose a vending machine executes a smart contract with you that only spends your Ethereum once it has dispensed your snack. Or suppose a driverless Uber only charges you once you have been dropped off. Or suppose Alice only pays Bob once Bob has paid Paul (note: this is the only scenario currently possible on Ethereum because the only information the smart contract has is the blockchain/transaction history).
-
-All of these things can be done much more efficiently with a program running in a data center somewhere—and at least a company could update or terminate the code when a bug is discovered.
-
-“But that’s not trustless and decentralized because I have to trust a central authority!” You are /always/ going to have to trust a counterparty when you are buying a good or service. >99.999% of transactions are done with companies; this is not likely to change ever, so the assumption is that smart contracts would be adopted by companies. Here are all the ways you still have to /trust/ someone: You would have to…
-
-1. trust that the company is reporting accurate information to the smart contract,
-2. trust that the company wrote the smart contract to not rob you (as if most people could even read the code themselves 🙄),
-3. trust that the company wrote the code without any bugs at all, ever, and
-4. trust that the Ethereum network wouldn’t get 51% attacked or otherwise exploited at any point during the execution of your smart contract.
-
-The sacrifices you would have to make for the Ethereum dream to work could only ever be taken up by someone with a radical political conviction in favor of it, not by any rational actor who seeks to maximize well-being. It has a significant real cost in order to solve  a non-existent imaginary problem.
-
-If people have a choice between some business practice that can potentially lose a ton of money and another that has almost no chance of that (centralized payment infrastructure), they will /always/ choose the one that won’t lose them money.
-*** decentralized apps “dApps”
-This is part of the “world computer” meme. Ethereum wants to create decentralized programs running on the Ethereum P2P network. The only successful example of this is [[https://en.wikipedia.org/wiki/CryptoKitties][a video game about cats]] that crashed the network (because who would have guessed…a bunch of users running a program on everyone’s computers has n×m complexity and is super inefficient).
-
-The problem: /It costs money every time you interact with a dApp./
-
-A dApp can’t function as, say, an alarm clock, because an Ethereum dApp only wakes up once someone pays money to it.
-
-If a rational human has a choice between paying for running software and an alternative that is free (centralized apps), they will /always/ choose the one that is free.
-*** scam ICOs
-I have a lot of respect for the creator of Ethereum. I think he had good intentions for the project, but unfortunately, the community seems to have been taken over by scammers looking to exploit the public’s greed for quick cash grabs (ICOs). The SEC explains [[https://www.sec.gov/ICO][the scam that is ICOs]] better than I could.
-** Grin/MimbleWimble
-Very promising technology in its infancy. It’s staunchly not a scam cash grab like nearly every other alt coin. It was designed to be used as trustless and anonymous cash. Since it has permanent inflation, it is unlikely to ever inspire a Ponzian sentiment and attract hoarders who would drive up the price. It’s most likely going to go to zero, and that’s a shame.
+[[https://blog.bitmex.com/ether-a-double-digit-shitcoin/][Scam]]. It’s the best of the scams though.
