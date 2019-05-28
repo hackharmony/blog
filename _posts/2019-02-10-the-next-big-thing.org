@@ -5,14 +5,11 @@ subtitle: Or how to identify the Next Big Thing
 ---
 
 #+OPTIONS: toc:t
-* Get Rich Quick?
-You hear a lot about the very smart people who invented or pioneered things (e.g., Edison, Ford, Gates, Jobs, Zuckerberg), but you don’t hear much fanfare about the (arguably smarter) people who invested in them and made fortunes [[https://en.wikipedia.org/wiki/Rent-seeking][without doing all the hard work]].
 
-The tendency to gamble is really the distilled form of the desire to Get Rich Quick. Gambling has been around [[https://en.wikipedia.org/wiki/Gambling#History][since the dawn of human civilization.]] The impulse to take risks for large  gains is fundamental to the human experience.
-
-Gambling feels good, gives us a reliable and addiction-forming shot of dopamine. Why? Evolution incentivized the genes that promoted gambling: /We are all invariably descendants of people who took massive risks and happened to succeed/. The Paleolithic landscape offered many no doubt chances to win big for taking big risks; the winners outbred those who didn’t take risks. Without getting too philosophical, I would argue that the human impulse to Get Rich Quick is the #1 reason communism is a failure.
-
-Don’t tell me getting rich slowly is more guaranteed---I know. But don’t tell me this is not interesting.
+* Summary
+- All great investment vehicles start as amazing opportunities.
+- Eventually people crowd those investments until the expected reward and risk is priced in.
+- All investments equilibriate like this to reach near parity with the next best alternative, e.g., the S&P 500.
 * Lifecycle of investments
 ** The cycle of all successful investment strategies
 1. *Genesis*: Someone discovers or invents something big, potentially paradigm-shifting or just a Better Mousetrap. This is the new “Investment Vehicle,” as I will refer to it here. Think personal computers in the early 1990s.
@@ -26,13 +23,10 @@ Sound familiar? This is the story of every once Big Thing that landed on economi
 
 Despite how it may sound, this is not a description of a bubble or Ponzi scheme or a pump-and-dump. It may resemble a Ponzi in that early investors are rewarded. But it doesn’t reward early investors at the direct expense of the investments of the new investors, because it doesn’t dump to zero; it just keeps going up. The phenomenon of the personal computer or the smartphone is the prototypical example of the kind of investment I’m talking about: the PC was undervalued in the beginning because the masses didn’t see the potential. The difference between a bubble and the type of investment I’m talking about is that the new investors don’t suffer for the early investors’ benefit---they just benefit less.
 ** Examples
-- Flipping houses? Dead; $100+ Billion market cap REITs got into it too and took the opportunities that once allowed individuals to get rich.
-- Trading stocks, Forex, or derivative securities? Dead. Hedge funds and investment banks employ Ph.D. quants to design proprietary algorithms to extract money from the market. High frequency trading algorithms can execute tens of thousands of trades per second, whereas an individual human can barely move their mouse over the Sell button in one second. All short-term trading opportunities are taken by these machines. Investment bank traders have taken an [[https://youtu.be/sn1GYqfijvs?t=417][80% pay cut]] ever since high frequency trading rolled out. The pros can’t beat the machines---so the average Joe retail trader stands no chance. What can ordinary retail traders do to invest in markets? Basically just passive investment in major indices, or long term bets on assets based on long-term fundamentals. So not much better than pension fund. Dead.
-- Investing in Amazon, Uber, et al.? Dead. Obviously. These former Next Big Things are now just another item on a pension fund, right alongside Coca-Cola and AT&T.
-- Buying and selling cars? Dead. Some decades ago, it was possible to make good money by taking advantage of people who didn’t know how much cars were worth. The internet killed this. Everyone uses an app to sell their car and knows exactly how much it is worth. (N.B. flipping cars is not necessarily a passive investment, but it is worth mentioning under the category of easy money sources subsumed by mass adoption.)
-- Bitcoin/Ethereum/cryptocurrencies? Dead. Everyone and their grandma in the United States has a [[https://en.wikipedia.org/wiki/Coinbase][Coinbase]] account with funds. It was a phenomenal investment for the Smart Money who got in early. (Bitcoin may actually be the biggest ROI-time (return on investment with time considered) in human history. Some people paid on the order of $0.001 for what turned into $10’000.00 just seven years later---10’000’000x gains in 7 yrs.) Of course the bubble burst, but the value proposition remains: There is no better alternative for a censorship-resistant medium of exchange that can store or move value arbitrarily without any counterparties. The days are gone of people smuggling art or gold around the world to move money without anyone knowing---they all use Bitcoin now. Anyway, point is, as an investor, this ship has already sailed.
-
-When I say “Dead”, I don’t mean that you cannot make money by investing in them. On the contrary, thanks to compounding returns, over several decades it’s possible to turn $10k into $1 Million. I mean that they are no longer Next Big Things that have the potential to give truly crazy returns. Not interesting.
+- flipping houses
+- buying and selling cars
+- reselling plastic junk from China
+- any publicly traded company before it went public
 ** Reversion to the S&P 500
 Every investment strategy that has anomalous high rewards quickly reverts to those of the S&P 500 once enough people know about it.
 
@@ -42,7 +36,6 @@ Like most economic phenomena, supply and demand are at play. An investment that 
 
 [fn:arbitraging] You could say early investors or Smart Money /arbitrage time/, but honestly that’s taking the analogy to cringe levels.
 
-
 Once the speculative asset proves itself promising to the broader market, the future forecast becomes less speculative; the demand side naturally rises. The cost of entry increases. Wealth is created. As the asset continues to perform up to investor predictions, it will continue to attract new investors, higher and higher demand. When does it peak and demand slow down? When the performance of the investment achieves parity with the next best alternative, which is often the S&P 500 index. (It’s very hard to beat the returns of the S&P 500, which is why relative performance of investments are [[https://en.wikipedia.org/wiki/Alpha_(finance)][measured against it]].) Then demand will cool off. Equilibrium will set in. It’s no longer a better-than-average investment. Why? *Because too many people found out about it.*
 * The Next Big Thing
 The point of our inquiry isn’t necessarily to promote pessimism. Yes, all good investments eventually become not-good investments because too many people hear about them. That’s just an objective fact. You will not make better-than-average money by investing in something a lot of other people are also investing in. If that discourages you from investing (e.g., in some investment strategy [[https://www.tailopez.com/][some charlatan]] convinced you was a Sure Thing), then maybe it’s a good thing you’re discouraged; high false expectations lead to high disappointments. The point of identifying this fact is to use it to discover really good investments. Hardly pessimistic.
@@ -50,8 +43,6 @@ The point of our inquiry isn’t necessarily to promote pessimism. Yes, all good
 The important thing to realize is popularity is inversely correlated to the quality of an investment. /No one gets rich by doing the same thing everyone else is doing/...proven as a straightforward consequence of the definition of “rich” being relative to average wealth.
 
 For instance, the [[https://en.wikipedia.org/wiki/Renaissance_Technologies#Medallion_Fund][only hedge fund]] that has consistently beat the market for decades is private and invite-only. Given the previous discussion, it’s clear why they did this. Suppose they made the fund public. Everyone would immediately crowd into it. They would have to expand their anomalously profitable positions to be able to invest all the new money. This would drive up the price of those positions, making them no longer profitable, eliminating the advantage they once had by taking advantage of superior knowledge about the value of assets that weren’t priced in. The low number of participants is one of the big reasons why the fund performs so well in the first place.
-
-Venture capital industrializes the concept of finding winners no one else is investing in. But they have more capital than you to absorb the loss of 99 losing bets in the process of the process of finding the 1 winner that pays for everything. Does this make you a competitor to venture capital if you’re trying to discover a true Get Rich Quick scheme? Yes. So not only is your risk infinite as your speculations turn out wrong, but you also have competition in doing exactly that. Getting rich quick isn’t meant to be easy...or else everyone else would be doing it, and it wouldn’t be getting rich quick anymore.
 
 So what do you look for? What’s the Next Big Thing? Based on the previous Next Big Things, there are some patterns: (1) they created new industries, (2) they changed the way most people lived[fn:beneficial], (3) no one predicted them[fn:sounding], and (4) few expected them to be successful.
 
@@ -80,9 +71,3 @@ What’s next?
 [fn:beneficial] Not necessarily for the better. That was never a requirement.
 
 [fn:sounding] People have a tendency to only predict things that sound cool. People in the 70s predicted moon colonies---not as a consequence of necessity, but moon colonies sure sounded cool, like a sci-fi movie. [[https://en.wikipedia.org/wiki/The_Singularity_Is_Near][Ray Kurzweil’s Singularity]] also sounds very cool too, like a sci-fi movie.
-* Rent-seeking vs. Creating
-It’s fun to chase Get Rich Quick schemes, but it’s ultimately pointless and adds almost zero value to humanity. I can’t think of anything more self-centered than [[https://en.wikipedia.org/wiki/Venture_capital][professionally seeking to profit from other people’s creations]], but [[https://en.wikipedia.org/wiki/Ayn_Rand][some philosophies]] are used by [[https://en.wikipedia.org/wiki/Peter_Thiel][some people]] to argue this is not a bad thing. After all, without investors, a lot of very good ideas would never have gotten off the ground. Good ideas need resources to produce good for the world. Investment serves a purpose. Although on paper it’s a zero sum game---the recipient of a future-successful investment loses long term value to the investor---, there is no alternative in a non-perfect world where scarcity exists.
-
-Speaking from purely an idealistic perspective, it’s better to create, not just profit from other people’s creation. There are two categories of ways to generate value for yourself: rent-seeking or creating. Things like playing poker, trading stocks, gambling, suing people, imprisoning people for profit, etc. are all zero-sum games; your win is someone else’s loss. These activities only create value as a consequence of human-invented organized economies. They really are /games/---simulacra of tangible achievement. Profitably trading Forex currency pairs isn’t something that would feed you if you lived 100’000 years ago in nature[fn:naturalistic]. It’s not real achievement. Getting really good at playing zero-sum games is guaranteed to be less personally fulfilling than equivalent effort expended on actual creation. Work. Build something. Add value to the world. It not only pays better, but it’s also a better use of your time.
-
-[fn:naturalistic] Not to imply that everything which is unnatural is necessarily bad.
