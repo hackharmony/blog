@@ -1,0 +1,39 @@
+---
+layout: post
+title: The Case Against The Dvorak Keyboard Layout
+---
+
+* Don’t learn Dvorak---it’s a tremendous waste of time
+If you’re already good at typing on the standard QWERTY layout and thinking about learning Dvorak---/stop right now/. It’s not just a waste of time, but it will also mess up your muscle memory and almost permanently handicap your ability to type in QWERTY, i.e., every other keyboard in the world.
+
+The Dvorak keyboard failed. And no, it wasn’t because [[https://reason.com/archives/1996/06/01/typing-errors][evil market forces]] wouldn’t let its benefits be realized in the name maximizing profits by avoiding retraining employees. It failed for a good reason. None of the claims made by Dvorak---namely, that this keyboard layout would lead to faster or less fatiguing typing---was ever borne out in reproducible studies. The only studies where Dvorak was concluded to be superior were the “studies” supervised by Dvorak himself. I don’t want to necessarily make the argument that /If Dvorak was better, then we would be using it because the market is perfectly efficient/, since I’m not making an economic critique. I’m saying that from a technical perspective the keyboard layout itself is bad. Very bad.
+* Non-standard
+This is perhaps the most obvious of complaints. You can learn Dvorak and subjectively find it a superior keyboard layout that changed your life, but in a world of billions of QWERTY keyboards that aren’t changing anytime soon, you will have to end up using QWERTY keyboards. Unless you’re literally living under a rock.
+
+The motivation of switching to Dvorak is to improve efficiency. So why optimize yourself for a world that doesn’t exist (a world that uses Dvorak instead of QWERTY)?
+
+This is symptomatic of a delusional mindset that a lot of scientist and engineer types tend to have, where they believe they are in an ideal world that rewards purity and efficiency in the abstract.
+* It’s actually worse for RSI because your keystrokes are crowded on the home row
+Repetitive. Strain. Injury.
+
+One of the selling points of Dvorak (and indeed Colemak, Workman, carpalx, and any number of alternative keyboard layouts) is that you can type many more English words without leaving the home row. The Dvorak keyboard is designed so that your fingers can spend more time punching the home row rather than moving around a lot as QWERTY is designed to encourage [fn:qwertyOriginStory].
+
+Moving your fingers and hands around a lot is /good/ for preventing RSI/carpal tunnel syndrome. The rationale of Dvorak is intuitive---you move your fingers less, so that must mean that your hands will be damaged less. That intuition is deceiving. Typing is a repetitive activity no matter how you do it, but moving your fingers with a shorter range of motion is more dangerous. Having your wrists catatonic while striking a narrow region of the keyboard is the recipe for RSI. QWERTY forces you to dance your fingers around the entire surface of the keyboard, minimizing the time that your wrists remains frozen and making short repetitive movements. 
+
+How is this a good thing? When I tried typing Dvorak---and I really tried, getting up to 50 wpm---, I found my right hand fatiguing far more quickly than I normally do on QWERTY. Unlike the Dvorak evangelists, though, I won’t be quick to use my subjective, n=1 experience as groundbreaking evidence. You don’t need to believe me, just look at the positioning of keys on the Dvorak layout. 
+
+[fn:qwertyOriginStory] Fun fact: QWERTY was designed to maximize the distance between keys to prevent early typerwiters from jamming when 2 nearby keys were pressed in close succession.
+* So what about all the anecdotal reports on the internet about people who cured their RSI by switching to Dvorak?
+Dvorak takes several months just to develop the muscle memory to be able to type on it at all, let alone reattain one’s previous QWERTY speed. Most people can get up to no more than 30 wpm after a month of nonstop Dvorak (quitting QWERTY cold turkey).
+
+/The reason people cure their RSI by switching to Dvorak is they start typing slower/ during the switch, and typing slower cools off their RSI. It takes so long to even get up to half your previous QWERTY speed that you’re basically taking a very long vacation from typing; of course your typing-related injuries would be allowed to heal.
+
+The fact that none of the anecdotal reports about Dvorak healing RSI ever seem to mention this is proof positive of the delusion.
+* What to actually do to prevent RSI
+Get an ergonomic keyboard.
+* The bigger lesson
+For some things (and you have to know which things in particular), convention matters more than efficiency in the abstract.
+
+When choosing between Dvorak and QWERTY, you have a choice to either get good at something no one knows vs. something everyone knows.
+
+Write Java. Write C++. Write Python. Use the most popular libraries. Get good at plugging in stuff to Mathematica and numpy before doing abstract algebra. Don’t write in Lisp and Haskell. Stop using vim in a terminal instead of an IDE.
