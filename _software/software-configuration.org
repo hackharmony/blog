@@ -17,7 +17,7 @@ How to set Emacs-like keybindings in GTK v3:
 $ gsettings set org.gnome.desktop.interface gtk-key-theme "Emacs"
 #+END_SRC
 
-If you have Anaconda installed, make sure your path points to your system gsettings not Anaconda’s gsettings.
+Troubleshooting: If you have Anaconda installed, make sure your path points to your system gsettings not Anaconda’s gsettings.
 **** Gtk2
 #+BEGIN_SRC bash
 gconftool-2 --type=string --set /desktop/gnome/interface/gtk_key_theme Emacs
@@ -356,7 +356,7 @@ The only native way to limit blue light on MacBooks is to enable “Night Shift�
 *** iPhones
 Same as the instructions for MacBooks above. Display → Brightness → Night Shift.
 *** Other laptops
-As far as I know, unless you can get lucky finding some settings in your BIOS, you will have to install third party software like Redshift on Linux.
+As far as I know, unless you can get lucky finding some settings in your BIOS, you will have to do it in software.
 ** Keyboards
 The name of the game is to avoid RSI/carpal tunnel syndrome.
 *** Mechanical keyboards
@@ -369,8 +369,12 @@ Mechanical keyboards are a revival of the ancient technology used by IBM Model M
 Many people swear by mechanical keyboards. Despite claims by the fanatics, there is no reason to believe they prevent RSI or even improve typing speed. In fact, if you choose the wrong type of switch, mechanical keyboards can /worsen/ RSI. Cherry MX Green switches require you to bottom out on every keypress, which can put tremendous strain on your wrist muscles/tendons.
 
 Having used mechanical keyboards for years, the real reason to use mechanial keyboards is the subjective satsifaction you get when typing with them. Typing == productivity, so anything that incentivizes typing is a Good Thing.
+
+*Cherry MX Brown* is the best mechanical key switch for typing.
 *** Use sticky keys
 A major culprit of RSI is keyboard shortcut combinations.
+
+Very difficult to get used to it though.
 * Jekyll
 ** Use org-mode without any fuss
 Install [[https://github.com/hackharmony/jekyll-org-to-html][my Jekyll converter plugin for using org-mode markup in a Jekyll site]]. It uses Emacs directly—using Emacs’s mature, native org-mode HTML export command rather than reinventing a separate org-mode exporter. There are no surprises to deal with if you are a regular org-mode user.
