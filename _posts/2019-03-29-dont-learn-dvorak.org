@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Case Against The Dvorak Keyboard Layout
+categories: [software]
 ---
 
 * Don’t learn Dvorak---it’s a tremendous waste of time

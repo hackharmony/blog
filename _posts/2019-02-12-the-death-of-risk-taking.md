@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Death of Risk Taking
+category: economics
 ---
 
 # Summary

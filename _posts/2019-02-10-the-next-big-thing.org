@@ -2,6 +2,7 @@
 layout: post
 title: All Investment Strategies Mean Revert
 subtitle: Or how to identify the Next Big Thing
+categories: [philosophy]
 ---
 
 #+OPTIONS: toc:t
