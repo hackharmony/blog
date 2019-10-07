@@ -8,26 +8,25 @@ subtitle: A curated list of the best software, programming languages, or develop
 * What is this?
 This is a curated collection of software that I recommend and brief reviews. It’s basically your ultimate guide to computing effectively. I have a bias toward software with free and open source licenses. Where I choose proprietary alternatives otherwise is always for very good reason.
 * Operating system
-Use the right tool for the job. It all really depends on what you are doing, so instead of recommending one OS over all others, I will review each of them based on my experience with them. I have used all major operating systems. The top 3 OSes (macOS, GNU/Linux, and Windows) are all part of my regular usage, and all have their uses.
+Use the right tool for the job. But…
 
-1. GNU/Linux
-2. Windows 10
-3. macOS
-4. *BSD
+GNU/Linux > Windows 10 >>>> macOS
 
-That said, macOS is trash. One very important job of an operating system is to interface with hardware. I can’t run it on >99% of software, only Apple’s approved machines. Therefore it’s a horrible OS.
+This goes against the orthodoxy of Apple everything. I think macOS is trash. One very important job of an operating system is to interface with hardware. I can’t run it on >99% of software, only Apple’s approved machines. Therefore it’s a horrible OS, failing at the most important job of an operating system.
 
-Linux won.
-
-It’s time for Apple and Microsoft to stop duplicating effort. There is no reason for humanity to duplicate effort on something as boring as a kernel. Gains from competition aren’t relevant in this field because everyone needs the kernel to work for actual business. Trillions of dollars depend on Linux working; it’s forever. It’s already on 90% of smartphones. Let’s get Windows and macOS to port their userspace to Linux.
+It’s time for Apple and Microsoft to stop duplicating effort. There is no reason for humanity to duplicate effort on something as boring as a kernel. Gains from competition aren’t relevant in this field because everyone needs the kernel to work for actual business. Trillions of dollars depend on Linux working; it’s forever. It’s already on 90% of smartphones. Let’s get Microsoft and Apple to port their userspace to Linux.
 * Web browser
-** Chromium (or Google Chrome)
-As much as I wanted to like Mozilla Firefox, I have stopped fighting the trend. Every website out there is developed to target WebKit browsers first. There is no competing with the massive resources and mindshare directed at Chromium development. This means more than just better superficial features—it means better security updates. Chrom{e, ium} has the best dev tools for web development.
+** Chromium
+There is no competing with the massive resources and mindshare directed at Chromium development. This means more than just better superficial features—it means better security updates too. Chrom{e, ium} has the best devtools.
 
-Prefer Chromium (or Brave) over Google Chrome. Why? It has slightly less spyware built in, and you are free to compile it yourself in the spirit of free software.
+Just turn off the spyware.
+** Mozilla Firefox
+It is basically abandonware at this point. Again, we need to stop replicating effort. This isn’t the same thing as Internet Explorer; we are well past that. Mozilla devs should start working on Chromium so we can all benefit.
 * Text editor / IDE
 ** editor
 Yes, it’s time for that childish argument.
+*** Visual Studio Code is the best text editor
+I still use Emacs, but any serious work has to be done in an IDE or Visual Studio Code. You are literally only hurting yourself if you only ever want to use Emacs or Vim.
 *** GNU Emacs
 I know it’s [[https://en.wikipedia.org/wiki/Imprinting_(psychology)#Baby_duck_syndrome][baby duck syndrome]], but I +like+ can bear with it.
 
@@ -42,35 +41,25 @@ Pros:
 Cons:
 - Default keybindings are inherently RSI-inducing. For your health, use completely different keybindings for editing. I use evil-mode to emulate Vim’s objectively superior keybindings. Most RSI comes from doing complicated key chords where you have to hold down multiple far away keys at once. Avoid/remap key chords where possible and/or use Sticky Keys.
 - The kernel code is very old. It’s very complicated, spaghetti-ish C code.
-- The Elisp interpreter is /sloooow/. I haven’t measured, but it may actually be slower than Ruby.
+- The Elisp interpreter is /sloooow/. Legit slower than Ruby.
 - Graphical Emacs is very buggy compared to modern editors. Displaying text can take a long time. Opening a very large text file can hang your entire system.
 - Using Emacs will make you look very old and out-of-touch.
 
 I don’t recommend religiously using Emacs only. It’s just a tool, and a bad one for many tasks. The whole point of Emacs, in my opinion, is to save time. If you’re writing Java, C#, or mobile apps, you’re not saving time by using Emacs to do it, you’re wasting yours and everyone else you’re working with’s time. Also, believe it or not 🙃: You can run Emacs /and/ an IDE at the same time to work on the same project. Crazy stuff, I know.
-*** VS Code
-VS Code is the best of the next-generation crop of text editors built on Electron/node.js. It’s the killer for Sublime Text and all those proprietary text editors which never really needed to exist (especially as closed source and for-pay). I understand not everyone will want to use Emacs or Vim (and I definitely don’t blame them)---VS Code is a fine generalist editor. It fills a similar position that Emacs does (in spirit): It’s basically an IDE in terms of feature set but isn’t tied to a specific language, OS, or runtime environment. It’s also relatively easy to customize and write extensions for (cf. Atom, Sublime Text, and others), but still nothing as easy as writing Elisp.
-
-Microsoft continues to [[https://www.youtube.com/watch?v=Vhh_GeBPOhs][prioritize the experience of developers]], a solid business strategy that will lead them to prosperity for decades to come.
-
-All the new language plugins get tried in VS Code first. It’s definitely the future. If Microsoft gives up on it for some reason, then the community will take it over as a FOSS project.
 *** Vim
-Vim is what I originally started with. It’s great, but if that’s all you use, you’ll find yourself wanting more features than just a text editor.
+Vim is what I originally started with. It’s great. It’s the best tool for text editing, which should make it the best text editor if text editing were all we did with “text editors”. You’ll find yourself wanting more features than just a text editor.
 
 Clearly a lot of thought went into vi keybindings. I have to admit they are highly productive. I use evil-mode in Emacs and vi emulators in any other IDEs I use.
-** IDE
+
+Vim is a great editor missing an OS.
+** IDEs
 *** Visual Studio
-If you are doing any kind of development for Windows systems, you would be a fool to use anything but Visual Studio. (N.B., I’m not talking about /Visual Studio Code/.)
-
-Visual Studio is hands down the best C++ IDE ever.
-*** IntelliJ JetBrains
-Best IDE for Java.
-
-PyCharm is the best IDE for Python.
-
-Use it.
+The best C++ IDE in existence. Such a shame that it is stuck to Windows.
+*** PyCharm
+Really useful for larger Python projects. Recommended.
 * Shell
-** bash
 ** zsh
+zsh is better than bash. Switch.
 ** Python or Ruby
 If you have to write a script that will ever be used again in the future by you or someone else, then don’t write it in any shell script. Please use Python or Ruby (not Perl—that’s as unreadable as shell). Shell script is for one-off actions.
 
@@ -94,22 +83,19 @@ The older a programming language, the better. If an old language is still being 
 Last on the list, I consider the /aesthetics/ of the language to be important. I’m not talking about syntax per se. Code in an Aesthetic Language gives you a feeling of freedom and makes you happy to see it. An Aesthetic Language makes it very easy to write easy-to-read code. You /feel/ like you can do anything with the language because the syntax isn’t holding you back. The most Aesthetic Language that comes to mind is Common Lisp---you are stripped of all the limitations of traditional structured programming languages and are free to express yourself in constructs you make yourself (Lisp macros). Ruby is also an Aesthetic Language. By contrast, an Ugly Language is C because everything is either an if statement, a glorified goto/jump, or a for loop, forcing you to encode your solution space in this tiny vocabulary as if you’re an assembly programmer from the 1970s. This is completely my personal take; feel free to dismiss this aspect of programming language selection. But I’d rather live in a world with less PHP even though PHP is probably one of the top 3 programming languages by the amount of wealth generated (read: Facebook).
 ** Languages
 *** by use case
-**** large projects
+**** general purpose
 1. Java
-2. C++
-3. Rust
+2. Rust
+3. C++
+4. Common Lisp
 **** scripting (one-off)
 1. Ruby
 2. Python
 **** science/stats/machine learning
 1. Python
-2. Mathematica
-3. C++
-4. R
 **** web services
 1. Java
 2. Golang
-3. Ruby
 *** Reviews
 **** C++
 The ultimate industrial powerhouse Swiss army knife of languages.
@@ -118,10 +104,20 @@ You’re running a program(s) written in C++ to read this right now. It’s fast
 
 I don’t care how hard it is to use. The ends justify the means here.
 
-C++ (or C) being behind almost every good piece of software in existence is kind of proof that you shouldn’t listen to what programmers say about what languages are the best. C++ is one of the most hated languages. Yes, it’s memory unsafe. Yes, it’s dangerous. Yes, it’s needlessly complicated. Yes, it has way too many features, most of which are bad. Ever considered that (shockingly) maybe these are necessary side effects of the reasons for its success, and the abstract criteria by which it is criticized actually don’t matter. After a ruler keeps giving inaccurate measurements for tables over and over, when do you stop blaming the table manufacturers and start looking for a new ruler instead?
+C++ being behind almost every good piece of software in existence is kind of proof that you shouldn’t listen to what programmers say about what languages are the best. C++ is one of the most hated languages. Yes, it’s memory unsafe. Yes, it’s dangerous. Yes, it’s needlessly complicated. Yes, it has way too many features, most of which are bad. Ever considered that (shockingly) maybe these are necessary side effects of the reasons for its success, and the abstract criteria by which it is criticized actually don’t matter. After a ruler keeps giving inaccurate measurements for tables over and over, when do you stop blaming the table manufacturers and start looking for a new ruler instead?
 
-100 years from now I guarantee you, barring civilizational collapse, you will still be using C++ binaries and there will still be people writing C++.
+You have definitely been on an airplane running C++. The stock market market runs on C++. All performance-critical systems are written in C++, like the major deep learning frameworks. C++ is the language of important things.
+
+100 years from now I guarantee you, barring civilizational collapse, you will still trust your life to C++.
 **** Common Lisp
+***** Literally the best programming language
+Common Lisp is the most important programming language you will ever learn. The macro is the killer feature; you can write your own syntax constructs and domain-specific languages. Write in Lisp and you don’t need any other language.
+
+Yes there are a lot of parentheses, but the benefit is that the syntax is extremely straightforward. The program is represented as a linked list. The grammar for the whole language can fit on a page.
+
+Despite being so old, Lisp does seem like the logical endpoint of all programming languages. It is a programmable programming language. The full power of the compiler is available to you as normal code, not some escape hatch as is the case with the C preprocessor. Also despite being so old, it refuses to die.
+
+Lisp, in its essence, is such a simple idea that even if it were forgotten in a nuclear war that it would reappear again once computers were created. Lisp is a universal shelling point for computer programming. This is why the unofficial mascot for Lisp is an alien.
 ***** recommended implementation
 SBCL
 ***** If LISP is so good, why did it fail?
@@ -143,24 +139,32 @@ SBCL
 **** Golang
 Golang is basically a DSL for writing web servers and web services. It is /phenomenal/ at this. Golang gives you all the batteries you need to write very good web and networking software and the battle-testedness that comes with it being used by big corporations for this purpose.
 
-You shouldn’t use it for much else though. Well, it’s good as an alternative to Python for when you need a binary and non-molasses performance.
+Personally I really don’t like the language. It is very restrictive. I understand the need it was trying to solve though. It is healthier for a long-term project to enforce hyper-simplistic standards because realistically there will be a lot of unrelated people working on it over time. Golang in this way aims to take Java’s place as the line-of-business, commodity programmer’s language. Imagine you manage hundreds of people, mostly remote, working on some boring web app. Use Golang. Except Golang gives you less rope than Java does, so it’s even better for this.
 **** JavaScript
+Use Typescript instead. It is a superset of Javascript.
 **** Java
-Java gets far too much hate. It’s the best language and ecosystem for almost 99% of applications.
+Java gets far too much hate. It’s the best language and ecosystem for 99% of applications.
 **** Ruby
+More enjoyable to work with than Python, but its community is dying since Rails has lost steam.
 **** Python
-**** Mathematica
-**** Rust
+Default programming language for everything. There’s nothing positive or negative to say about it. If you hate it, you’re doing yourself a disservice by missing out on convenient the ecosystem of tools. If you like it, you probably shouldn’t.
 **** Haskell
+A largely useless language fraught with legend and myth but that otherwise no one uses. I wasted some time with this language and functional languages in general so you don’t have to.
+
+Doing FP makes you a better programmer because you're writing programs. I'm taking the null hypothesis that after a year of writing functional code you would have improved just as much as you would have writing non-functional code. I have literally never seen anything to demonstrate otherwise other than hand waving and personal anecdotes.
+
+Functional programming selects for better than average programmers to begin with--the "programmer's programmer" that writes code for fun and probably visits this site. You're unlikely to convince to learn Haskell the person who writes enterprise .NET, never used anything but Windows, and who never opened a text editor after work. The functional programmers were already good before they became functional programmers. Then you get the cargo cult type of intrigue. "X writes really good code. X also uses $FP_LANG! Be more like X!"
+
+And no, functional programming isn’t taking over. The “lambdas” that appear with much hype in new programming language releases have nothing to do with FP lambdas. A lambda in functional programming is supposed to be a primitive you use to [[https://en.wikipedia.org/wiki/Fixed-point_combinator#Fixed_point_combinators_in_lambda_calculus][do]] [[https://en.wikipedia.org/wiki/Lambda_calculus][everything]]. In Java 8/C++11/Swift, the lambdas you speak of are used only as sugar for lexically embedded subroutines so that you don’t need to declare another subroutine.
+
+Like category theory? Study category theory. Then at least what you learn will have relevance to more than just a man-made story like one programming language. (Never forget that all programming languages are just man-made stories about how the machine works with varying conformance to reality.)
 *** Trash Languages
 **** C
-The triumph of C was one of the greater tragedies in the history of computing (and perhaps the history of humanity). The entire computer security industry would not exist without C. It is broken by design. Programmers having access to pointers to raw memory was a mistake. C is behind every security vulnerability or software crash that cost society trillions of dollars or countless human lives whenever critical systems have crash for “unknown” reasons. Every C programmer thinks he or she is going to be the one who is smart enough to never make these serious mistakes; they laugh when you tell them to sacrifice a tiny bit of performance for a memory/type safe language instead. Nah, Python and Java are for wimps.
+C is the worst thing to happen to computing. It is sadly responsible for existence of the entire computer security industry. The sooner it is extinguished from this earth, the better off we will be.
 
-The worst part is that the C mental model isn’t even how CPUs work anymore. Where’s the C semantics for minimizing cache misses? Or SIMD opcodes? Or GPU programming? You have to use compiler extensions and vendor specific DSLs. Compiler authors have worked very hard to infer educated guesses about the correct instructions from C code, because C code is unable to express these intents. C as a language is hardly “close to the metal”---it’s only so by accident because the compilers are so advanced.
+C is unsafe. C is easy to reverse engineer. C is ugly.
 
-Don’t use C. Boycott C. Use modern C++20 and get literally the exact same performance at significantly less risk for catastrophic failure.
-**** Visual Basic.NET
-I have never used this one, but I still feel entitled to badmouth it because it’s BASIC after all.
+There is no “C/C++”. C++ is an entirely different language that lets you write reasonably safe code in reasonable time. Doing anything in C ends up being a long research project—that you’ll probably have to scrap and rewrite in the end because it has so many memory leaks.
 **** PHP
 Spaghetti code. Spaghetti code everywhere.
 
@@ -186,48 +190,17 @@ If I were designing a programming language hoping for it to be widely adopted, I
 **** Perl
 Dead camel
 **** Clojure
-Clojure is not LISP. It sacrifices way too much to run on the JVM. (Not that I think being a hosted language was a bad idea---it just should have been LLVM.) Clojure is an internal tool used by Rich Hickey’s database company. It’s slower than Java. No one is adopting it. Expect to spend a lot of time reading the source of Clojure to figure out how all the black boxes work. Use it at your own risk.
-
-If you really need to use a LISP and can’t use SBCL/LispWorks/etc. for some reason, go for Clojure of course. But you don’t /really/ need to use LISP unless you can also use SBCL. I fail to see the motivation for using this.
-*** Useless But Fun Hobby Languages
-Only devote time to these if you literally have nothing better to do, or are doing a Ph.D. on programming language theory. They explore very interesting ideas, but rest assured, these ideas will be incorporated in mainstream languages if they are proven good enough.
-**** Haskell
-The most important thing you can learn from Haskell is when to give up learning something.
-
-Haskell is a very beautiful language, but with the mental energy required to get good at it, you could have done so many other things. Personally, I learned the basics of the language up until I got to lenses and monad transformers; then I gave up, putting it on hold until some future time. On top of the core language, there is also the ever-growing [[https://wiki.haskell.org/Language_extensions][Haskell language extensions]], which Haskell programmers actually make frequent use of. There is basically no end to the rabbit hole for Haskell. Some people have written Haskell for 5+ years and still haven’t grasped the whole thing. It’s absolutely daunting with little real use cases to motivate you to keep learning.
-
-Some consolation: Even if you are a wizard at Haskell, you won’t be able to write many useful programs with it—comfortably—because of how awkward it is at handling side effects. Network connections, IO on databases, drawing graphics, interacting with hardware—this is the bread and butter of real world programming. Have fun doing that in Haskell all day.
-
-Since everyone touts Haskell “because it makes you a better programmer,” why not get that benefit without wasting time trying to write programs in Haskell? Just learn these memes:
-
-- currying
-- functors
-- applicative functors
-- fmap, join, bind; [[https://en.wikibooks.org/wiki/Haskell/Category_theory][elementary category theory]]
-- [[https://wiki.haskell.org/Typeclassopedia][monads]]
-**** Idris
-Dependent types are potentially a game changer. Problem is, I can’t think of many practical uses for them aside from the canonical example of vector bounds checking.
-
-Speaking completely from ignorance, I feel like a lot of the promises from the functional programming world smell like [[http://wiki.c2.com/?GoldenHammer][GoldenHammer]] propositions. Everyone wants some magic tool to prevent them from writing bugs.
-**** Scheme
-Read SICP.
-**** CoQ
+Clojure is not LISP. It sacrifices way too much to run on the JVM. (Not that I think being a hosted language was a bad idea---it just should have been LLVM.) Clojure is an internal tool used by Rich Hickey’s database company. I feel sorry for people whose only exposure to Lisp is Clojure.
 * Databases
-** RDBMS
-*** PostgreSQL
-** In-Memory Cache
-*** Redis
-** Embedded
-*** SQLite3
-*** LMDB
+** PostgreSQL
+PostgreSQL is a long-term support tech stack. Too many people rely on it, like Apache, but it’s also actually good. You need a very good reason to use anything else.
 * Fonts
 ** serif
 *** Baskerville
 Baskerville was found to be the [[https://opinionator.blogs.nytimes.com/2012/08/08/hear-all-ye-people-hearken-o-earth/][most trustworthy]] font on empirical testing.
 *** Charter
 Very beautiful font for body text. I believe that serif fonts are more readable. Charter is one of the best serif fonts I have come across, and it’s available for free.
-*** Publico Text
-** monospace (for code)
+** monospace
 *** Go Mono
 [[https://blog.golang.org/go-fonts][Go Mono]] is part of a family of fonts from the Golang team. Unlike any other monospaced fonts I have seen, Go Mono kind of looks like a serif font. I really think serif fonts are ideal for readability.
 *** Fira Mono
@@ -239,12 +212,15 @@ The Lamborghini of programming fonts. This is, as of the time of writing, [[http
 *** Adelle Sans
 *** San Francisco
 * Cryptocurrency
-** Bitcoin ($XBT)
-- First mover advantage
+** Bitcoin
+- Game changer for individual freedom
 - Historical value
-- Digital gold; store of value
 - Capped supply motivates a game theoretic boost in its market value
-** Monero ($XMR)
-This is one of the best cryptocurrencies and probably the only one besides Bitcoin that will still be used in 20 years. Monero implements the ideal of cryptocurrency as an anonymous, fungible, censorship-resistant electronic cash.
-** Ethereum ($ETH)
-[[https://blog.bitmex.com/ether-a-double-digit-shitcoin/][Scam]]. It’s the best of the scams though.
+- Currency of the internet
+- First mover advantage
+** Ethereum
+Designed for a world that does not exist yet. There aren’t any uses for smart contracts. But there should eventually be a use for Turing-complete money. When the need arrives, Ethereum will be the most prepared to fill that role. Owning Ethereum is kind of a call option on a future high-tech decentralized economy.
+** Monero
+Monero implements the ideal of cryptocurrency as an anonymous, fungible, censorship-resistant electronic cash. As long as Bitcoin has value, Monero should too, so it should remain as a way for people to use currency without interference from totalitarian governments.
+** Everything else
+Everything besides Bitcoin is a [[https://blog.bitmex.com/ether-a-double-digit-shitcoin/][scam]] anyway.
