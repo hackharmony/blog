@@ -2,3 +2,6 @@
 	path = _site
 	branch = master
 	url = https://github.com/hackharmony/hackharmony.github.io
+[submodule "vendor/jekyll-org-to-html"]
+	path = vendor/jekyll-org-to-html
+	url = https://github.com/proprietary/jekyll-org-to-html.git

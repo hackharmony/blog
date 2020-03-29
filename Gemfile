@@ -5,6 +5,6 @@ gem "redcarpet"
 gem "pygments.rb"
 
 group :jekyll_plugins do
-  gem "jekyll-org-to-html", :path => "~/devel/jekyll-org-to-html"
+  gem "jekyll-org-to-html", :path => "./vendor/jekyll-org-to-html"
   gem "jekyll-paginate"
 end
